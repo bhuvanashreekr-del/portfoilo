@@ -103,6 +103,27 @@
   margin-top: 0;
   margin-bottom: 8px;
 }
+
+.app-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-raised, #161b22);
+  color: var(--trace, #3fb950);
+  border: 1px solid var(--trace, #3fb950);
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  text-decoration: none;
+  margin-top: 12px;
+  transition: all 0.2s ease;
+}
+
+.app-link-btn:hover {
+  background: var(--trace, #3fb950);
+  color: #0d1117;
+}
 </style>
 </head>
 <body>
@@ -413,7 +434,7 @@
           </p>
 
           <div class="activity-block">
-            <h4>Activity 1 — Fusion 360 Water Bottle 3D Model</h4>
+            <h4>Activity 1 — CAD / Fusion 360 Water Bottle Model</h4>
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
               Worked with Autodesk Fusion 360 to design a detailed 3D model of a water bottle. Understood basic 3D modeling techniques, product geometry modeling, and the end-to-end workflow from digital design to 3D printing preparation.
             </p>
@@ -422,39 +443,32 @@
           <div class="activity-block">
             <h4>Activity 2 — 3D Printing Activity</h4>
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Explored the physical additive manufacturing process by 3D printing the water bottle model created in Fusion 360, learning layer-by-layer fabrication principles and slicer settings.
+              Explored the physical additive manufacturing process in a separate session by 3D printing the water bottle model created in Fusion 360, learning layer-by-layer fabrication principles and slicer settings.
             </p>
           </div>
 
           <div class="activity-block">
-            <h4>Activity 3 — Visionary Selection</h4>
+            <h4>Activity 3 — Visionary Selection &amp; Alpha Team Formation</h4>
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Participated in the Visionary selection process conducted for cohort evaluation, presenting ideas and undergoing candidate evaluation.
+              Participated in the Visionary selection process conducted for cohort evaluation. Following the selection process, participated in the formal segregation and formation of Alpha teams for targeted innovation challenges.
             </p>
           </div>
 
           <div class="activity-block">
-            <h4>Activity 4 — Alpha Team Formation</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Following the selection process, participated in the formal segregation and formation of Alpha teams for targeted innovation challenges.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 5 — Laser Cutting Fabrication</h4>
+            <h4>Activity 4 — Laser Cutting Fabrication</h4>
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
               Participated in a hands-on laser cutting activity as part of rapid prototyping and fabrication, exploring material cutting speeds, vector paths, and structural assembly.
             </p>
           </div>
 
           <div class="activity-block">
-            <h4>Activity 6 — Social Media Debate / Group Discussion</h4>
+            <h4>Activity 5 — Social Media Debate / Group Discussion</h4>
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Concluded the week with a structured group discussion and debate on the topic: <em>“Social Media – Good Influencer or Bad?”</em>. Strengthened communication skills, public discussion, critical thinking, and evaluating diverse perspectives.
+              Concluded the week on Saturday with a structured group discussion and debate on the topic: <em>“Social Media – Good Influencer or Bad?”</em>. Strengthened communication skills, public discussion, critical thinking, and evaluating diverse perspectives.
             </p>
           </div>
 
-          <!-- WEEK 4 INDIVIDUAL IMAGE PLACEHOLDERS -->
+          <!-- RENUMBERED WEEK 4 PHOTOS (PHOTO 4 REMOVED) -->
           <div class="image-gallery">
             <div class="image-card">
               <img src="images/protosim/week4/fusion360-water-bottle.jpg" alt="Fusion 360 water bottle 3D model" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Fusion+360+Water+Bottle'">
@@ -469,16 +483,12 @@
               <div class="caption">// Photo 03: Visionary Selection</div>
             </div>
             <div class="image-card">
-              <img src="images/protosim/week4/alpha-team.jpg" alt="Alpha Team Formation" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Alpha+Team+Formation'">
-              <div class="caption">// Photo 04: Alpha Team Formation</div>
-            </div>
-            <div class="image-card">
               <img src="images/protosim/week4/laser-cutting.jpg" alt="Laser Cutting Activity" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Laser+Cutting+Activity'">
-              <div class="caption">// Photo 05: Laser Cutting Activity</div>
+              <div class="caption">// Photo 04: Laser Cutting Activity</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week4/social-media-debate.jpg" alt="Social Media Debate / Group Discussion" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Social+Media+Debate'">
-              <div class="caption">// Photo 06: Social Media Debate / Group Discussion</div>
+              <div class="caption">// Photo 05: Social Media Debate / Group Discussion</div>
             </div>
           </div>
 
@@ -500,131 +510,54 @@
           </div>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-            Week 5 progressed from initial UI/UX design into user research, project management principles, client requirements analysis, and engineering calculation:
+            Week 5 progressed from UI/UX design into user research, project management principles, startup client meeting, and engineering calculations:
           </p>
 
+          <!-- SESSION 1: UI/UX -->
           <div class="activity-block">
-            <h4>Activity 1 — Figma UI/UX Fundamentals</h4>
+            <h4>Session 1 — UI/UX Design &amp; User Research</h4>
+            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
+              Learned core principles of UI/UX design in Figma, received the formal project problem statement, and conducted user surveys to collect responses. Based on the survey findings, analyzed user needs and refined problem requirements for our digital interface.
+            </p>
+
+            <!-- WEBSITE / APP LINK PLACEHOLDER BUTTON -->
+            <a href="#" target="_blank" rel="noopener" class="app-link-btn">
+              <span>View UI/UX Prototype / Application Link ↗</span>
+            </a>
+          </div>
+
+          <!-- SESSION 2: PROJECT MANAGEMENT -->
+          <div class="activity-block">
+            <h4>Session 2 — Project Management Workshop (Bosch Expert)</h4>
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Learned core principles of UI/UX design in Figma, including frames, layout grids, visual hierarchy, and component styling.
+              Attended a dedicated Project Management session conducted by <strong>Bhuvan Sundar Surappaiya from Bosch</strong>, introducing project planning, milestones, execution frameworks, and resource tracking.
             </p>
           </div>
 
+          <!-- CLIENT / STARTUP MEETING & TECHNICAL RESEARCH -->
           <div class="activity-block">
-            <h4>Activity 2 — Problem Statement Briefing</h4>
+            <h4>Client Meeting &amp; Technical Research (Startup Elikal)</h4>
+            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
+              Participated in a technical client meeting with representatives from startup Elikal to clarify system requirements and operational scope.
+            </p>
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Received and analyzed the formal project problem statement to define core objectives and user needs.
+              Following the startup meeting, conducted technical research on battery sizing calculations (voltage &amp; Ah capacity), motor sizing calculations (load torque &amp; RPM matching), completed a recommended technical course suggested by the founder of Elikal, and researched hub motor working principles and market solutions.
             </p>
           </div>
 
-          <div class="activity-block">
-            <h4>Activity 3 — User Survey Execution</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Designed and conducted target user surveys to gather empirical feedback, understand end-user pain points, and collect quantitative data.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 4 — Survey Response &amp; Problem Analysis</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Analyzed survey data responses to refine problem requirements and focus technical feature prioritization.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 5 — Project Management Session (Bosch Expert Guest)</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Attended an expert project management workshop conducted by <strong>Bhuvan Sundar Surappaiya from Bosch</strong>, introducing project planning, milestones, execution frameworks, and resource tracking.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 6 — Client / Startup Requirement Meeting</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Participated in a technical client meeting with startup representatives to clarify system specifications and operational requirements.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 7 — Battery Sizing Research &amp; Calculation</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Researched battery sizing mathematical equations, evaluating voltage rating, amp-hour (Ah) capacity, depth of discharge, and runtime factors.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 8 — Motor Sizing Research &amp; Load Calculation</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Researched motor sizing calculations, torque requirements, RPM specifications, and matching motor load ratings to vehicle application constraints.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 9 — Recommended Technical Course Completion</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Completed a recommended technical course suggested by the founder of startup Elikal to deepen technical understanding of electric drive parameters.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 10 — Hub Motor Working Principles Research</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Researched hub motor technologies, examining BLDC hub motor construction, thermal performance, gearless vs. geared hubs, and application suitability.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 11 — Market &amp; Commercial Solution Research</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Conducted commercial market research on existing hub motor products, vendor specifications, and component availability.
-            </p>
-          </div>
-
-          <!-- WEEK 5 INDIVIDUAL IMAGE PLACEHOLDERS -->
+          <!-- RENUMBERED WEEK 5 PHOTOS (EXCESS REMOVED) -->
           <div class="image-gallery">
             <div class="image-card">
               <img src="images/protosim/week5/figma-uiux.jpg" alt="Figma UI/UX Activity" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Figma+UI%2FUX+Activity'">
               <div class="caption">// Photo 01: Figma UI/UX Activity</div>
             </div>
             <div class="image-card">
-              <img src="images/protosim/week5/problem-statement.jpg" alt="Problem Statement" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Problem+Statement'">
-              <div class="caption">// Photo 02: Problem Statement Briefing</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week5/user-survey.jpg" alt="User Survey" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=User+Survey'">
-              <div class="caption">// Photo 03: User Survey Execution</div>
-            </div>
-            <div class="image-card">
               <img src="images/protosim/week5/survey-analysis.jpg" alt="Survey Analysis / Problem Analysis" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Survey+Analysis'">
-              <div class="caption">// Photo 04: Survey Response &amp; Problem Analysis</div>
+              <div class="caption">// Photo 02: Survey Response &amp; Problem Analysis</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week5/project-management.jpg" alt="Project Management Session" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Project+Management+Session'">
-              <div class="caption">// Photo 05: Project Management Session (Bosch Expert)</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week5/client-meeting.jpg" alt="Client / Startup Meeting" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Client+%2F+Startup+Meeting'">
-              <div class="caption">// Photo 06: Client / Startup Requirement Meeting</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week5/battery-sizing.jpg" alt="Battery Sizing Calculation" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Battery+Sizing+Calculation'">
-              <div class="caption">// Photo 07: Battery Sizing Calculation</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week5/motor-sizing.jpg" alt="Motor Sizing Calculation" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Motor+Sizing+Calculation'">
-              <div class="caption">// Photo 08: Motor Sizing Calculation</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week5/technical-course.jpg" alt="Technical Course" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Technical+Course'">
-              <div class="caption">// Photo 09: Technical Course Completion (Elikal)</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week5/hub-motor-research.jpg" alt="Hub Motor Research" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Hub+Motor+Research'">
-              <div class="caption">// Photo 10: Hub Motor Technical Research</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week5/market-research.jpg" alt="Market Research" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Market+Research'">
-              <div class="caption">// Photo 11: Market &amp; Commercial Solution Research</div>
+              <div class="caption">// Photo 03: Project Management Session (Bosch Expert)</div>
             </div>
           </div>
 
@@ -649,151 +582,65 @@
             Week 6 combined client digital product design in Figma with hands-on embedded electronics, transistor circuits, soldering practice, and ESP32 projects:
           </p>
 
-          <h3 style="color:var(--trace); margin-top:20px;">Part 1: UI/UX &amp; Client Project Design</h3>
-
+          <!-- CLIENT MEETING -->
           <div class="activity-block">
-            <h4>Activity 1 — First Alpha Team Client Meeting</h4>
+            <h4>First Alpha Team Client Meeting</h4>
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Attended our Alpha team's first client meeting to establish formal project requirements, scope boundaries, and deliverables.
+              Attended our Alpha team's first client meeting regarding the problem statement to establish project requirements and scope boundaries.
             </p>
           </div>
 
+          <!-- UI/UX CONTINUATION SESSION -->
           <div class="activity-block">
-            <h4>Activity 2 — UI/UX Brand Identity &amp; Visual System</h4>
+            <h4>UI/UX Continuation Session</h4>
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Worked on project visual branding for the UI/UX design, establishing color palettes, typography guidelines, and design tokens.
+              Worked on project branding, created a mind map organizing problem dimensions and solutions, built a site map structuring application flow, designed webpage layouts, created wireframes in Figma, and developed an interactive application prototype in Figma focusing on user flow and UI/UX structure.
             </p>
           </div>
 
+          <!-- COMPUTATIONAL HARDWARE AND EMBEDDED SYSTEMS SESSION -->
           <div class="activity-block">
-            <h4>Activity 3 — Problem &amp; Solution Mind Map</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Created a comprehensive mind map organizing problem dimensions, feature constraints, user journeys, and technical solution pathways.
+            <h4>Session: Computational Hardware &amp; Embedded Systems</h4>
+            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
+              Attended a comprehensive session covering digital electronics, transistor logic, soldering practice, microcontrollers, and sensor/actuator applications:
             </p>
+            <ul style="color:var(--text-muted); padding-left:20px; margin-bottom:0; display:flex; flex-direction:column; gap:6px;">
+              <li><strong>Electronics Basics &amp; NOT Gate:</strong> Learned basic electronics concepts and implemented a transistor-based inverter circuit using an NPN transistor by studying circuit diagrams and wiring dot boards.</li>
+              <li><strong>Soldering &amp; PCB Work:</strong> Learned soldering iron thermal control, soldering/desoldering components, and practiced soldering on PCB boards.</li>
+              <li><strong>Target Shooter ESP32 Game:</strong> Developed an interactive "Target Shooter" game integrating an ESP32 microcontroller, OLED display, analog joystick, and ultrasonic sensor.</li>
+              <li><strong>Sensors &amp; Actuators:</strong> Selected a PIR Sensor (motion sensor) and Door Strike Actuator (solenoid lock), preparing a technical presentation explaining their working principles and applications.</li>
+            </ul>
           </div>
 
-          <div class="activity-block">
-            <h4>Activity 4 — Application Site Map Architecture</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Structured a detailed site map defining page navigation hierarchy, screen routing, and information architecture.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 5 — User Interface &amp; Webpage Layout Design</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Designed core webpage interfaces based on client specifications and insights gathered from earlier user surveys.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 6 — Application Wireframing in Figma</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Constructed low-fidelity and high-fidelity wireframes in Figma, establishing screen components and interaction layouts.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 7 — Interactive Figma Application Prototype</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Developed an interactive, clickable application prototype in Figma to demonstrate user flow, navigation transitions, and interface behavior.
-            </p>
-          </div>
-
-          <h3 style="color:var(--trace); margin-top:28px;">Part 2: Computational Hardware &amp; Embedded Electronics</h3>
-
-          <div class="activity-block">
-            <h4>Activity 8 — Electronics &amp; Embedded Systems Fundamentals</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Studied foundational concepts of digital electronics, microcontroller pinouts, voltage levels, and embedded system structures.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 9 — NOT Gate / Inverter Circuit Using NPN Transistor</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Studied NOT gate inverter logic and built a physical transistor-based inverter circuit using an NPN transistor on a dot board.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 10 — PCB Soldering &amp; Component Desoldering Practice</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Learned soldering iron thermal management, component tinning, PCB soldering techniques, and desoldering pump operation while practicing on PCB boards.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 11 — "Target Shooter" ESP32 Interactive Game</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Developed an interactive "Target Shooter" hardware game integrating an ESP32 microcontroller, OLED display, analog joystick, and ultrasonic distance sensor.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 12 — Sensor &amp; Actuator Technical Presentation</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Selected a <strong>PIR Sensor</strong> (motion detection sensor) and a <strong>Door Strike Actuator</strong> (solenoid lock actuator), preparing and delivering a technical presentation on their operating principles, pinout specs, and real-world application scenarios.
-            </p>
-          </div>
-
-          <!-- WEEK 6 INDIVIDUAL IMAGE PLACEHOLDERS -->
+          <!-- RENUMBERED WEEK 6 PHOTOS (EXCESS REMOVED) -->
           <div class="image-gallery">
             <div class="image-card">
-              <img src="images/protosim/week6/first-client-meeting.jpg" alt="First Client Meeting" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=First+Client+Meeting'">
-              <div class="caption">// Photo 01: First Client Meeting</div>
-            </div>
-            <div class="image-card">
               <img src="images/protosim/week6/uiux-branding.jpg" alt="UI/UX Branding" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=UI%2FUX+Branding'">
-              <div class="caption">// Photo 02: UI/UX Branding &amp; Design Tokens</div>
+              <div class="caption">// Photo 01: UI/UX Branding &amp; Visual System</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week6/mind-map.jpg" alt="Mind Map" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Mind+Map'">
-              <div class="caption">// Photo 03: Problem &amp; Solution Mind Map</div>
+              <div class="caption">// Photo 02: Problem &amp; Solution Mind Map</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week6/site-map.jpg" alt="Site Map" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Site+Map'">
-              <div class="caption">// Photo 04: Application Site Map</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week6/webpage-design.jpg" alt="Webpage Design" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Webpage+Design'">
-              <div class="caption">// Photo 05: Webpage Layout Design</div>
+              <div class="caption">// Photo 03: Application Site Map Architecture</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week6/app-wireframes.jpg" alt="Application Wireframes" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=App+Wireframes'">
-              <div class="caption">// Photo 06: Application Wireframes in Figma</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week6/figma-prototype.jpg" alt="Figma Application Prototype" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Figma+Interactive+Prototype'">
-              <div class="caption">// Photo 07: Figma Interactive Prototype</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week6/electronics-basics.jpg" alt="Electronics and Embedded Systems Basics" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Electronics+Basics'">
-              <div class="caption">// Photo 08: Electronics &amp; Embedded Systems Basics</div>
+              <div class="caption">// Photo 04: Application Wireframes in Figma</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week6/not-gate-npn.jpg" alt="NOT Gate / NPN Transistor Circuit" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=NOT+Gate+NPN+Circuit'">
-              <div class="caption">// Photo 09: NOT Gate / NPN Transistor Dot Board Circuit</div>
+              <div class="caption">// Photo 05: NOT Gate / NPN Transistor Dot Board Circuit</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week6/soldering-pcb.jpg" alt="Soldering on PCB" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Soldering+on+PCB'">
-              <div class="caption">// Photo 10: PCB Soldering &amp; Desoldering Practice</div>
+              <div class="caption">// Photo 06: PCB Soldering &amp; Desoldering Practice</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week6/target-shooter.jpg" alt="Target Shooter – ESP32 OLED Joystick Project" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Target+Shooter+ESP32'">
-              <div class="caption">// Photo 11: Target Shooter (ESP32, OLED, Joystick &amp; Ultrasonic)</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week6/pir-sensor.jpg" alt="PIR Sensor" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=PIR+Sensor'">
-              <div class="caption">// Photo 12: PIR Motion Sensor</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week6/door-strike-actuator.jpg" alt="Door Strike Actuator" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Door+Strike+Actuator'">
-              <div class="caption">// Photo 13: Door Strike Solenoid Actuator</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week6/sensor-actuator-presentation.jpg" alt="Sensor and Actuator Presentation" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Sensor+Actuator+Presentation'">
-              <div class="caption">// Photo 14: Sensor &amp; Actuator Technical Presentation</div>
+              <div class="caption">// Photo 07: Target Shooter (ESP32, OLED, Joystick &amp; Ultrasonic)</div>
             </div>
           </div>
 
@@ -818,152 +665,60 @@
             Week 7 covered microcontroller programming, firmware architectures, IoT cloud platforms, and building full-stack web applications with Firebase Authentication and Hosting:
           </p>
 
-          <h3 style="color:var(--trace); margin-top:20px;">Part 1: Arduino &amp; Embedded Systems Fundamentals</h3>
-
+          <!-- CONTINUATION: COMPUTATIONAL HARDWARE & EMBEDDED SYSTEMS -->
           <div class="activity-block">
-            <h4>Activity 1 — Arduino IDE Development Workflow</h4>
+            <h4>Computational Hardware &amp; Embedded Systems — Continuation</h4>
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Learned the Arduino IDE toolchain, board manager configuration, sketch compilation, and serial communication monitor debugging.
+              Continued hardware learning from Week 6: tested LED blinking using Arduino boards, learned Arduino IDE basics and pin functions for peripheral interfacing, explored embedded simulators and emulators, studied the five-block embedded architecture, understood processor polling loops, learned C and Embedded C programming, and deepened digital NOT gate / inverter logic principles.
             </p>
           </div>
 
+          <!-- IOT SESSION -->
           <div class="activity-block">
-            <h4>Activity 2 — Arduino Pin Mapping &amp; Peripheral Interfacing</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Studied digital I/O pins, analog input pins, PWM outputs, and hardware interfacing rules for external sensors and actuators.
+            <h4>Session: Internet of Things (IoT)</h4>
+            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
+              Attended a dedicated IoT session exploring connected devices, sensors, actuators, communication protocols, and remote device control:
             </p>
+            <ul style="color:var(--text-muted); padding-left:20px; margin-bottom:0; display:flex; flex-direction:column; gap:6px;">
+              <li><strong>Adafruit Cloud Bulb Control:</strong> Configured Adafruit IO feeds/dashboards, wrote Arduino IDE C code, and tested remote bulb ON/OFF control over Wi-Fi.</li>
+              <li><strong>Firebase Web Application:</strong> Built a beginner-friendly web application featuring a responsive landing page, user registration/login with Firebase Email/Password Authentication, protected dashboard using <code>onAuthStateChanged()</code>, logout using <code>signOut()</code>, and deployed via Firebase Hosting CLI.</li>
+              <li><strong>ESP32 Local Web Server:</strong> Configured an ESP32 as an HTTP local web server, serving a web interface to toggle connected LEDs and relay-driven bulbs in real time.</li>
+            </ul>
           </div>
 
-          <div class="activity-block">
-            <h4>Activity 3 — Embedded Simulators &amp; Emulators</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Explored virtual hardware simulation tools and emulators used to test microcontroller code prior to physical hardware deployment.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 4 — Five-Block Embedded System Architecture</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Learned the five-block embedded architecture framework (Inputs, Processing Core, Memory, Outputs, Power/Communication).
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 5 — Processor Polling Concepts</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Studied polling execution loops in embedded systems, analyzing CPU cycles, status checking, and input state evaluation.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 6 — C &amp; Embedded C Fundamentals</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Learned Embedded C fundamentals, memory management, bitwise operations, register configuration, and header file declarations.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 7 — Digital NOT Gate / Inverter Logic</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Continued exploring digital logic inverter circuits, signal inversion, and pull-up/pull-down resistor configurations.
-            </p>
-          </div>
-
-          <h3 style="color:var(--trace); margin-top:28px;">Part 2: IoT Platforms &amp; Firebase Web Application</h3>
-
-          <div class="activity-block">
-            <h4>Activity 8 — Internet of Things (IoT) Session</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Learned IoT system fundamentals: connected sensor networks, gateway communication protocols, cloud dashboards, and remote device control.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 9 — Adafruit Cloud Dashboard &amp; Hardware Bulb Control</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Configured Adafruit IO MQTT feeds/dashboards and wrote Arduino C code to control hardware bulb ON/OFF switching remotely over Wi-Fi.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 10 — Beginner Firebase Web Application &amp; Hosting Deployment</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Created a beginner-friendly full-stack web application using the modular Firebase SDK. Built a responsive landing page, implemented user registration/login using <strong>Firebase Email/Password Authentication</strong>, protected user dashboards using <code>onAuthStateChanged()</code> listener, handled logout via <code>signOut()</code>, and configured <strong>Firebase Hosting CLI</strong> for web deployment.
-            </p>
-          </div>
-
-          <div class="activity-block">
-            <h4>Activity 11 — ESP32 Local Web Server LED/Bulb Control</h4>
-            <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-              Programmed an ESP32 microcontroller to act as an HTTP local web server, serving an embedded web interface to toggle connected LEDs and relay-driven bulbs in real time.
-            </p>
-          </div>
-
-          <!-- WEEK 7 INDIVIDUAL IMAGE PLACEHOLDERS -->
+          <!-- RENUMBERED WEEK 7 PHOTOS (EXCESS REMOVED, ESP32 WEB SERVER PRESERVED & RENUMBERED) -->
           <div class="image-gallery">
             <div class="image-card">
-              <img src="images/protosim/week7/arduino-ide.jpg" alt="Arduino IDE Basics" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Arduino+IDE+Basics'">
-              <div class="caption">// Photo 01: Arduino IDE Basics</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week7/arduino-pins.jpg" alt="Arduino Pins" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Arduino+Pins'">
-              <div class="caption">// Photo 02: Arduino Pins &amp; Peripheral Interfacing</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week7/simulator-emulator.jpg" alt="Simulator / Emulator" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Simulator+%2F+Emulator'">
-              <div class="caption">// Photo 03: Embedded Simulators &amp; Emulators</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week7/embedded-architecture.jpg" alt="Five-Block Embedded Architecture" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Five-Block+Architecture'">
-              <div class="caption">// Photo 04: Five-Block Embedded Architecture</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week7/polling.jpg" alt="Polling in Embedded Systems" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Polling+in+Embedded+Systems'">
-              <div class="caption">// Photo 05: Polling Concepts</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week7/c-embedded-c.jpg" alt="C and Embedded C" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=C+and+Embedded+C'">
-              <div class="caption">// Photo 06: C &amp; Embedded C Programming</div>
-            </div>
-            <div class="image-card">
               <img src="images/protosim/week7/not-gate.jpg" alt="NOT Gate / Inverter" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=NOT+Gate+Inverter'">
-              <div class="caption">// Photo 07: Digital NOT Gate / Inverter</div>
+              <div class="caption">// Photo 01: Digital NOT Gate / Inverter</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week7/iot-basics.jpg" alt="IoT Basics Session" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=IoT+Basics+Session'">
-              <div class="caption">// Photo 08: IoT System Fundamentals</div>
+              <div class="caption">// Photo 02: IoT System Fundamentals</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week7/adafruit-dashboard.jpg" alt="Adafruit Dashboard" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Adafruit+Dashboard'">
-              <div class="caption">// Photo 09: Adafruit Cloud Dashboard</div>
+              <div class="caption">// Photo 03: Adafruit Cloud Dashboard</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week7/bulb-control.jpg" alt="Bulb ON/OFF Hardware Setup" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Bulb+ON%2FOFF+Hardware'">
-              <div class="caption">// Photo 10: Adafruit Cloud Bulb Control Setup</div>
+              <div class="caption">// Photo 04: Adafruit Cloud Bulb Control Setup</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week7/firebase-landing-page.jpg" alt="Firebase Landing Page" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Firebase+Landing+Page'">
-              <div class="caption">// Photo 11: Firebase Landing Page</div>
+              <div class="caption">// Photo 05: Firebase Landing Page</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week7/firebase-authentication.jpg" alt="Firebase Login / Registration" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Firebase+Authentication'">
-              <div class="caption">// Photo 12: Firebase Auth (Login / Register)</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week7/firebase-dashboard.jpg" alt="Firebase Protected Dashboard" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Firebase+Dashboard'">
-              <div class="caption">// Photo 13: Firebase Protected Dashboard</div>
-            </div>
-            <div class="image-card">
-              <img src="images/protosim/week7/firebase-hosting.jpg" alt="Firebase Hosting / Deployment" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=Firebase+Hosting'">
-              <div class="caption">// Photo 14: Firebase Hosting CLI Deployment</div>
+              <div class="caption">// Photo 06: Firebase Auth (Login / Register)</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week7/esp32-web-server.jpg" alt="ESP32 Web Server" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=ESP32+Web+Server'">
-              <div class="caption">// Photo 15: ESP32 HTTP Local Web Server</div>
+              <div class="caption">// Photo 07: ESP32 HTTP Local Web Server</div>
             </div>
             <div class="image-card">
               <img src="images/protosim/week7/esp32-bulb-control.jpg" alt="ESP32 LED/Bulb Control Hardware" onerror="this.src='https://via.placeholder.com/400x200/161b22/8b949e?text=ESP32+Hardware+Control'">
-              <div class="caption">// Photo 16: ESP32 Local Web Server LED/Bulb Hardware</div>
+              <div class="caption">// Photo 08: ESP32 Local Web Server LED/Bulb Hardware</div>
             </div>
           </div>
 
