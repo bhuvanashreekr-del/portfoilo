@@ -649,7 +649,6 @@ img { max-width: 100%; display: block; }
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 14px;
   margin-top: 18px;
- <img src=""
 }
 .week-images img {
   width: 100%;

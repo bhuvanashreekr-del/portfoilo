@@ -91,4 +91,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* ---------- ProtoSem week tabs ---------- */
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const panels = document.querySelectorAll('.week-panel');
+  if (tabBtns.length && panels.length) {
+    const showWeek = (id) => {
+      tabBtns.forEach((b) => b.classList.toggle('active', b.dataset.target === id));
+      panels.forEach((p) => p.classList.toggle('active', p.id === id));
+    };
+    tabBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        showWeek(btn.dataset.target);
+        history.replaceState(null, '', '#' + btn.dataset.target);
+        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+    });
+    const initial = location.hash.replace('#', '');
+    if (initial && document.getElementById(initial)) showWeek(initial);
+  }
+
 });
