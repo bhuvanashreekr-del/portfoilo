@@ -75,4 +75,20 @@ document.addEventListener('DOMContentLoaded', () => {
     el.textContent = new Date().getFullYear();
   });
 
+  /* ---------- Copy email (contact page) ---------- */
+  const copyBtn = document.querySelector('.js-copy-email');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+      const email = copyBtn.getAttribute('data-email');
+      try {
+        await navigator.clipboard.writeText(email);
+        const original = copyBtn.textContent;
+        copyBtn.textContent = 'Copied';
+        setTimeout(() => { copyBtn.textContent = original; }, 1800);
+      } catch (err) {
+        window.location.href = `mailto:${email}`;
+      }
+    });
+  }
+
 });
