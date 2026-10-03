@@ -256,8 +256,6 @@ img { max-width: 100%; display: block; }
 .nav-links a.active::after { transform: scaleX(1); }
 
 .nav-cta { margin-left: 8px; }
-.nav-links a.btn-primary { color: #06181A; }
-.nav-links a.btn-primary::after { display: none; }
 
 .nav-toggle {
   display: none;
@@ -395,23 +393,17 @@ img { max-width: 100%; display: block; }
 .hero-panel {
   position: relative;
 }
-/* Webrivex card inside the hero's right column: stacked copy + visual */
-.hero-panel .feature-project { grid-template-columns: 1fr; }
-.hero-panel .feature-project .fp-copy { padding: 30px; }
-.hero-panel .feature-project .fp-visual { border-left: none; border-top: 1px solid var(--surface-border); padding: 28px; }
-.hero-panel .feature-project .fp-visual svg { max-width: 100%; height: auto; }
-
 .highlight-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 20px;
-  margin-top: 40px;
 }
 .highlight-card { padding: 30px; }
 .highlight-card .num { font-family: var(--font-display); font-size: 1.5rem; color: var(--trace); margin-bottom: 6px; }
 .highlight-card .label { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); }
 
-/* Featured project */
+/* Featured project (last section on Home) */
+#featured { padding-bottom: 48px; }
 .feature-project {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -606,6 +598,7 @@ img { max-width: 100%; display: block; }
 }
 .week-images:empty { display: none; }
 .resource-links a {
+  
   display: inline-block;
   font-family: var(--font-mono);
   font-size: 0.82rem;
@@ -678,12 +671,10 @@ img { max-width: 100%; display: block; }
    ========================================================================= */
 @media (max-width: 980px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-panel { order: -1; }
   .about-grid { grid-template-columns: 1fr; }
   .feature-project { grid-template-columns: 1fr; }
   .feature-project .fp-visual { border-left: none; border-top: 1px solid var(--surface-border); }
   .contact-grid { grid-template-columns: 1fr; }
-  .highlight-strip { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 760px) {
@@ -707,7 +698,6 @@ img { max-width: 100%; display: block; }
   .nav-links a::after { left: 8px; right: 8px; }
   .nav-toggle { display: flex; }
   .nav-cta { margin: 8px; }
-  .highlight-strip { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   .week-card { padding: 26px 20px; }
   .section { padding: 64px 0; }
