@@ -498,5 +498,41 @@
             <h2>Week 6 &mdash; Client Project UI/UX &amp; Computational Embedded Hardware</h2>
             <span style="font-family:'JetBrains Mono'; color:var(--trace);">September 2026</span>
           </div>
-          <p style="color:var(--text-muted); line-height:1.6;">
-            Week 6 combined client digital product design in Figma with
+          <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">Detailed notes for this week will be added soon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<button class="back-to-top" aria-label="Back to top">↑</button>
+<script>
+/* ProtoSem week tabs (self-contained so it works even if script.js is cached) */
+(function () {
+  function init() {
+    var btns = document.querySelectorAll('.tab-btn');
+    var wrap = document.getElementById('weekPanels');
+    if (!btns.length || !wrap) return;
+    function show(id, label) {
+      btns.forEach(function (b) { b.classList.toggle('active', b.getAttribute('data-target') === id); });
+      var panel = document.getElementById(id);
+      if (!panel) {
+        panel = document.createElement('div');
+        panel.className = 'week-panel';
+        panel.id = id;
+        panel.innerHTML = '<div class="glass" style="padding:28px; border-radius:12px;"><h2>' + label +
+          '</h2><p style="color:var(--text-muted); margin-bottom:0;">This week\'s journal entry will be added soon.</p></div>';
+        wrap.appendChild(panel);
+      }
+      document.querySelectorAll('.week-panel').forEach(function (p) { p.classList.toggle('active', p === panel); });
+    }
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function () { show(btn.getAttribute('data-target'), btn.textContent.trim()); });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script>
+<script src="script.js?v=4"></script>
+</body>
+</html>

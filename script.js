@@ -1,7 +1,7 @@
 /* =========================================================================
    BHUVANASHREE K R — PORTFOLIO SCRIPT
    Vanilla JS only. Handles: mobile nav, active link state, scroll-reveal
-   animation, back-to-top control, and footer year.
+   animation, back-to-top control, contact copy button, and ProtoSem tabs.
    ========================================================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -70,11 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- Footer year ---------- */
-  document.querySelectorAll('.js-year').forEach((el) => {
-    el.textContent = new Date().getFullYear();
-  });
-
   /* ---------- Copy email (contact page) ---------- */
   const copyBtn = document.querySelector('.js-copy-email');
   if (copyBtn) {
@@ -93,21 +88,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------- ProtoSem week tabs ---------- */
   const tabBtns = document.querySelectorAll('.tab-btn');
-  const panels = document.querySelectorAll('.week-panel');
-  if (tabBtns.length && panels.length) {
-    const showWeek = (id) => {
-      tabBtns.forEach((b) => b.classList.toggle('active', b.dataset.target === id));
-      panels.forEach((p) => p.classList.toggle('active', p.id === id));
+  const panelWrap = document.getElementById('weekPanels');
+  if (tabBtns.length && panelWrap) {
+    const showWeek = (id, label) => {
+      tabBtns.forEach((b) => b.classList.toggle('active', b.getAttribute('data-target') === id));
+      let panel = document.getElementById(id);
+      if (!panel) {                      /* week has no entry yet: show a placeholder */
+        panel = document.createElement('div');
+        panel.className = 'week-panel';
+        panel.id = id;
+        panel.innerHTML = '<div class="glass" style="padding:28px; border-radius:12px;"><h2>' + label +
+          '</h2><p style="color:var(--text-muted); margin-bottom:0;">This week\'s journal entry will be added soon.</p></div>';
+        panelWrap.appendChild(panel);
+      }
+      document.querySelectorAll('.week-panel').forEach((p) => p.classList.toggle('active', p === panel));
     };
     tabBtns.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        showWeek(btn.dataset.target);
-        history.replaceState(null, '', '#' + btn.dataset.target);
-        btn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-      });
+      btn.addEventListener('click', () => showWeek(btn.getAttribute('data-target'), btn.textContent.trim()));
     });
-    const initial = location.hash.replace('#', '');
-    if (initial && document.getElementById(initial)) showWeek(initial);
   }
 
 });
