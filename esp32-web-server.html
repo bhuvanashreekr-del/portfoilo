@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 Web Server | IoT Learning</title>
+    <link rel="stylesheet" href="iot.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <div class="logo">Bhuvanashree_KR</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="experience.html">Experience</a>
+            <a href="protosem.html">ProtoSem</a>
+            <a href="iot.html" class="active">IoT Learning</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+</nav>
+
+
+<header class="hero">
+
+    <span class="tag">TASK 01 · IoT LEARNING</span>
+
+    <h1>
+        ESP32 Web Server & <span>HTML LED Control</span>
+    </h1>
+
+    <p>
+        A practical exploration of using an ESP32 as a local web server
+        and controlling connected hardware through a web-based interface.
+    </p>
+
+</header>
+
+
+<main class="container">
+
+    <!-- 01 -->
+    <section class="section">
+
+        <div class="section-number">01</div>
+        <h2>Overview</h2>
+
+        <div class="card">
+            <p>
+                The objective of this task is to understand how an ESP32 can
+                operate as a local web server and provide a browser-based
+                interface for controlling connected hardware.
+            </p>
+
+            <p>
+                My Week 7 IoT work included an ESP32 Local Web Server where
+                the ESP32 was used to create a local HTTP web interface for
+                controlling LEDs and relay-driven bulbs.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- 02 -->
+    <section class="section">
+
+        <div class="section-number">02</div>
+        <h2>Concepts</h2>
+
+        <div class="grid">
+
+            <div class="info-box">
+                <h3>ESP32</h3>
+                <p>
+                    A microcontroller platform capable of Wi-Fi networking
+                    and hardware control.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>Web Server</h3>
+                <p>
+                    A program running on the ESP32 that responds to browser
+                    requests through HTTP.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>HTML Interface</h3>
+                <p>
+                    A browser-based interface can provide buttons or controls
+                    for interacting with the connected hardware.
+                </p>
+            </div>
+
+            <div class="info-box">
+                <h3>Local Communication</h3>
+                <p>
+                    The ESP32 and controlling device communicate through the
+                    local network.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 03 -->
+    <section class="section">
+
+        <div class="section-number">03</div>
+        <h2>System Design</h2>
+
+        <div class="card">
+
+            <div class="flow">
+
+                <div class="flow-box">
+                    User Device
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="flow-box">
+                    Web Browser
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="flow-box">
+                    ESP32
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="flow-box">
+                    Output
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 04 -->
+    <section class="section">
+
+        <div class="section-number">04</div>
+        <h2>Hardware & Software</h2>
+
+        <div class="grid">
+
+            <div class="info-box">
+                <h3>Hardware</h3>
+                <ul>
+                    <li>ESP32 development board</li>
+                    <li>LED / output device</li>
+                    <li>Relay-driven bulb setup</li>
+                    <li>USB connection</li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3>Software</h3>
+                <ul>
+                    <li>Arduino IDE</li>
+                    <li>ESP32 programming environment</li>
+                    <li>HTML web interface</li>
+                    <li>Web browser</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 05 -->
+    <section class="section">
+
+        <div class="section-number">05</div>
+        <h2>Wiring / Setup</h2>
+
+        <div class="card">
+
+            <p>
+                The ESP32 was connected to the required output hardware.
+                The exact GPIO pin mapping is not documented in the current
+                Week 7 material, so no specific pin numbers are stated here.
+            </p>
+
+            <div class="warning">
+                Exact circuit pin numbers should be added here if they are
+                available in the original hardware/code documentation.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 06 -->
+    <section class="section">
+
+        <div class="section-number">06</div>
+        <h2>Implementation</h2>
+
+        <div class="card">
+
+            <p>
+                The ESP32 was configured as a local web server. A web
+                interface was used to interact with the connected output.
+                The Week 7 documentation confirms that the setup was used
+                to toggle LEDs and relay-driven bulbs.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 07 -->
+    <section class="section">
+
+        <div class="section-number">07</div>
+        <h2>Configuration</h2>
+
+        <div class="card">
+
+            <ul>
+                <li>ESP32 configured for network communication.</li>
+                <li>Local web server functionality implemented.</li>
+                <li>Browser interface used for hardware interaction.</li>
+                <li>Output control tested using the connected hardware.</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- 08 -->
+    <section class="section">
+
+        <div class="section-number">08</div>
+        <h2>Evidence</h2>
+
+        <div class="image-grid">
+
+            <div class="image-card">
+                <img src="images/protosim/week7/esp32-web-server.jpg"
+                     alt="ESP32 Local Web Server">
+
+                <div class="caption">
+                    ESP32 configured as a local web server.
+                </div>
+            </div>
+
+            <div class="image-card">
+                <img src="images/protosim/week7/esp32-bulb-control.jpg"
+                     alt="ESP32 Bulb Control">
+
+                <div class="caption">
+                    ESP32-based web interface used for bulb control.
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 09 -->
+    <section class="section">
+
+        <div class="section-number">09</div>
+        <h2>Challenges & Fixes</h2>
+
+        <div class="card">
+
+            <p>
+                The current Week 7 documentation confirms the completed
+                ESP32 web-server and bulb-control work, but does not record
+                the individual debugging problems and fixes. Those details
+                can be added when the original troubleshooting notes are
+                available.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 10 -->
+    <section class="section">
+
+        <div class="section-number">10</div>
+        <h2>Reflection</h2>
+
+        <div class="card">
+
+            <p>
+                This task helped me understand how a microcontroller can
+                communicate with a browser and connect software interaction
+                with physical hardware. It also introduced me to the idea
+                of controlling an embedded system through a web interface.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- 11 -->
+    <section class="section">
+
+        <div class="section-number">11</div>
+        <h2>Repository Link</h2>
+
+        <div class="card">
+
+            <p>
+                The project repository link can be added here once the exact
+                GitHub folder or repository location for this assignment is
+                confirmed.
+            </p>
+
+            <div class="warning">
+                Replace this section with your actual GitHub repository URL.
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    ESP32 Web Server · IoT Learning · Bhuvanashree K R
+</footer>
+
+</body>
+</html>
