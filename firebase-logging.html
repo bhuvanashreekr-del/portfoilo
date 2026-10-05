@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Firebase Logging & Automation | IoT Learning</title>
 
     <link rel="stylesheet" href="iot.css">
+
 </head>
 
+
 <body>
+
 
 <nav class="navbar">
 
@@ -22,11 +29,19 @@
         <div class="nav-links">
 
             <a href="index.html">Home</a>
+
             <a href="about.html">About</a>
+
             <a href="skills.html">Skills</a>
+
             <a href="experience.html">Experience</a>
+
             <a href="protosem.html">ProtoSem</a>
-            <a href="iot.html" class="active">IoT Learning</a>
+
+            <a href="iot.html" class="active">
+                IoT Learning
+            </a>
+
             <a href="contact.html">Contact</a>
 
         </div>
@@ -38,15 +53,18 @@
 
 <header class="hero">
 
-    <span class="tag">TASK 05 · IoT LEARNING</span>
+    <span class="tag">
+        TASK 05 · IoT LEARNING
+    </span>
 
     <h1>
         Firebase Logging, <span>Automation & Data Export</span>
     </h1>
 
     <p>
-        Documentation structure for historical IoT data logging,
-        automation, monitoring and data export.
+        Understanding how an IoT system can collect information,
+        store historical data, automate device control and present
+        information through a cloud-connected dashboard.
     </p>
 
 </header>
@@ -55,321 +73,552 @@
 <main class="container">
 
 
-    <section class="section">
+<section class="section">
 
-        <div class="section-number">01</div>
-        <h2>Overview</h2>
+    <div class="section-number">01</div>
 
-        <div class="card">
+    <h2>Overview</h2>
+
+    <div class="card">
+
+        <p>
+            This assignment focuses on the architecture of a cloud-connected
+            IoT system where device information can be collected, stored,
+            monitored and used for automation.
+        </p>
+
+        <p>
+            The process involves connecting an IoT device with Firebase,
+            organising the collected information and presenting the
+            stored information through a dashboard.
+        </p>
+
+        <div class="warning">
+
+            The current Week 7 evidence does not establish a completed
+            DHT11/LDR historical logging and CSV export implementation.
+            Therefore, unsupported completed-work claims have not been
+            added.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">02</div>
+
+    <h2>Concepts</h2>
+
+    <div class="grid">
+
+
+        <div class="info-box">
+
+            <h3>Data Logging</h3>
 
             <p>
-                This task focuses on the structure of a cloud-connected IoT
-                system that can store device data, support automation and
-                present historical information.
-            </p>
-
-            <div class="warning">
-                The current Week 7 evidence does not establish a completed
-                DHT11/LDR historical logging, CSV export or automatic-mode
-                implementation. These features are therefore not claimed
-                as completed work here.
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="section">
-
-        <div class="section-number">02</div>
-        <h2>Concepts</h2>
-
-        <div class="grid">
-
-            <div class="info-box">
-                <h3>Data Logging</h3>
-                <p>
-                    Recording device information over time so that it can
-                    later be reviewed and analysed.
-                </p>
-            </div>
-
-            <div class="info-box">
-                <h3>Historical Data</h3>
-                <p>
-                    Previously recorded information stored for later viewing.
-                </p>
-            </div>
-
-            <div class="info-box">
-                <h3>Automation</h3>
-                <p>
-                    Automatically performing an action when defined
-                    conditions are met.
-                </p>
-            </div>
-
-            <div class="info-box">
-                <h3>Data Export</h3>
-                <p>
-                    Converting stored information into a downloadable or
-                    reusable format.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="section">
-
-        <div class="section-number">03</div>
-        <h2>System Design</h2>
-
-        <div class="card">
-
-            <div class="flow">
-
-                <div class="flow-box">
-                    IoT Device
-                </div>
-
-                <div class="arrow">→</div>
-
-                <div class="flow-box">
-                    Firebase
-                </div>
-
-                <div class="arrow">→</div>
-
-                <div class="flow-box">
-                    Dashboard
-                </div>
-
-                <div class="arrow">→</div>
-
-                <div class="flow-box">
-                    Historical Data
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="section">
-
-        <div class="section-number">04</div>
-        <h2>Hardware & Software</h2>
-
-        <div class="grid">
-
-            <div class="info-box">
-
-                <h3>Documented Week 7 Hardware</h3>
-
-                <ul>
-                    <li>ESP32</li>
-                    <li>Connected bulb-control hardware</li>
-                </ul>
-
-            </div>
-
-
-            <div class="info-box">
-
-                <h3>Software</h3>
-
-                <ul>
-                    <li>Firebase</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Arduino IDE</li>
-                </ul>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="section">
-
-        <div class="section-number">05</div>
-        <h2>Wiring / Setup</h2>
-
-        <div class="card">
-
-            <p>
-                The available Week 7 material contains ESP32 and bulb-control
-                evidence, but does not document a DHT11/LDR wiring diagram
-                or exact pin configuration.
+                Recording device information over time so that it can
+                later be reviewed and analysed.
             </p>
 
         </div>
 
-    </section>
 
+        <div class="info-box">
 
-    <section class="section">
-
-        <div class="section-number">06</div>
-        <h2>Implementation</h2>
-
-        <div class="card">
+            <h3>Historical Data</h3>
 
             <p>
-                The documented Week 7 work included an ESP32 local web server,
-                Adafruit IO cloud control and Firebase web application work.
-            </p>
-
-            <p>
-                A complete historical logging, automatic LDR-control and CSV
-                export implementation is not established by the available
-                evidence.
+                Previously recorded information stored for later
+                viewing and analysis.
             </p>
 
         </div>
 
-    </section>
 
+        <div class="info-box">
 
-    <section class="section">
-
-        <div class="section-number">07</div>
-        <h2>Configuration</h2>
-
-        <div class="card">
+            <h3>Automation</h3>
 
             <p>
-                Firebase authentication and web application configuration
-                are documented in Week 7. Specific historical database
-                structures, sensor thresholds and CSV export settings are
-                not included in the available record.
+                Automatically performing an action when a defined
+                condition is satisfied.
             </p>
 
         </div>
 
-    </section>
 
+        <div class="info-box">
 
-    <section class="section">
-
-        <div class="section-number">08</div>
-        <h2>Evidence</h2>
-
-        <div class="image-grid">
-
-            <div class="image-card">
-
-                <img src="images/protosim/week7/firebase-landing-page.jpg"
-                     alt="Firebase Landing Page">
-
-                <div class="caption">
-                    Firebase web application evidence from Week 7.
-                </div>
-
-            </div>
-
-
-            <div class="image-card">
-
-                <img src="images/protosim/week7/firebase-authentication.jpg"
-                     alt="Firebase Authentication">
-
-                <div class="caption">
-                    Firebase authentication evidence from Week 7.
-                </div>
-
-            </div>
-
-
-            <div class="image-card">
-
-                <img src="images/protosim/week7/esp32-web-server.jpg"
-                     alt="ESP32 Web Server">
-
-                <div class="caption">
-                    ESP32 local web-server evidence.
-                </div>
-
-            </div>
-
-
-            <div class="image-card">
-
-                <img src="images/protosim/week7/esp32-bulb-control.jpg"
-                     alt="ESP32 Bulb Control">
-
-                <div class="caption">
-                    ESP32 bulb-control evidence.
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="section">
-
-        <div class="section-number">09</div>
-        <h2>Challenges & Fixes</h2>
-
-        <div class="card">
+            <h3>Data Export</h3>
 
             <p>
-                The available Week 7 documentation does not provide a
-                detailed record of database logging, automation or CSV
-                export troubleshooting.
+                Converting stored information into a reusable format
+                such as CSV.
             </p>
 
         </div>
 
-    </section>
+
+    </div>
+
+</section>
 
 
-    <section class="section">
+<section class="section">
 
-        <div class="section-number">10</div>
-        <h2>Reflection</h2>
+    <div class="section-number">03</div>
 
-        <div class="card">
+    <h2>System Design</h2>
 
-            <p>
-                The documented IoT work helped me connect embedded systems,
-                cloud platforms and web interfaces. It also provided a
-                foundation for understanding how IoT data can be monitored
-                through a cloud-connected application.
-            </p>
+    <div class="card">
 
-        </div>
+        <div class="flow">
 
-    </section>
+            <div class="flow-box">
+                IoT Device
+            </div>
 
+            <div class="arrow">→</div>
 
-    <section class="section">
+            <div class="flow-box">
+                ESP32
+            </div>
 
-        <div class="section-number">11</div>
-        <h2>Repository Link</h2>
+            <div class="arrow">→</div>
 
-        <div class="card">
+            <div class="flow-box">
+                Firebase
+            </div>
 
-            <div class="warning">
-                Add the actual GitHub repository link for the completed
-                logging and data-export implementation if available.
+            <div class="arrow">→</div>
+
+            <div class="flow-box">
+                Dashboard
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">
+                Historical Data
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">04</div>
+
+    <h2>Hardware & Software</h2>
+
+    <div class="grid">
+
+
+        <div class="info-box">
+
+            <h3>Documented Hardware</h3>
+
+            <ul>
+
+                <li>ESP32</li>
+
+                <li>Connected bulb-control hardware</li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <h3>Software</h3>
+
+            <ul>
+
+                <li>Firebase</li>
+
+                <li>HTML</li>
+
+                <li>CSS</li>
+
+                <li>JavaScript</li>
+
+                <li>Arduino IDE</li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">05</div>
+
+    <h2>Wiring / Setup</h2>
+
+    <div class="card">
+
+        <p>
+            The available Week 7 material contains ESP32 and bulb-control
+            evidence, but does not document the exact DHT11/LDR wiring
+            or GPIO configuration.
+        </p>
+
+        <div class="warning">
+
+            Exact sensor wiring and pin information should be added only
+            if it is available from the original project implementation.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">06</div>
+
+    <h2>Implementation Process</h2>
+
+
+    <div class="card">
+
+        <h3>Step 1 — Planning the IoT Architecture</h3>
+
+        <p>
+            I first understood how the IoT device, ESP32, cloud database
+            and web dashboard could communicate with one another.
+        </p>
+
+        <div class="flow">
+
+            <div class="flow-box">IoT Device</div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">ESP32</div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">Firebase</div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">Dashboard</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 2 — Understanding Data Collection</h3>
+
+        <p>
+            I studied how an ESP32-based IoT system can collect sensor
+            values and device states and send the information to a
+            cloud platform.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 3 — Understanding Firebase Data Storage</h3>
+
+        <p>
+            I studied how IoT information can be organised and stored
+            in Firebase so that previously recorded values can later
+            be retrieved by a dashboard.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 4 — Planning Historical Records</h3>
+
+        <p>
+            I understood the importance of associating each recorded
+            value with a timestamp so that changes in the IoT system
+            can be analysed over time.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 5 — Understanding Manual and Automatic Control</h3>
+
+        <p>
+            I studied how an IoT system can provide manual control
+            through a dashboard as well as automatic control based
+            on sensor conditions.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 6 — Understanding Automation Logic</h3>
+
+        <div class="flow">
+
+            <div class="flow-box">
+                Sensor Value
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">
+                Condition
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">
+                Decision
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">
+                Output
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 7 — Dashboard Monitoring</h3>
+
+        <p>
+            I studied how stored IoT information can be retrieved and
+            displayed through a web dashboard so that users can
+            monitor current and historical information.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 8 — Understanding Data Export</h3>
+
+        <p>
+            I studied how stored historical information can be converted
+            into a structured format such as CSV so that the information
+            can be downloaded and analysed separately.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 9 — Testing the Complete Workflow</h3>
+
+        <p>
+            I planned the testing process by checking device readings,
+            Firebase updates, dashboard display, control operation and
+            historical data handling.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">07</div>
+
+    <h2>Configuration</h2>
+
+    <div class="card">
+
+        <p>
+            Firebase authentication and web application configuration
+            are documented in the Week 7 work. Specific historical
+            database structures, sensor thresholds and CSV export
+            settings are not included in the available record.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">08</div>
+
+    <h2>Evidence</h2>
+
+    <div class="image-grid">
+
+
+        <div class="image-card">
+
+            <img
+                src="images/protosim/week7/firebase-landing-page.jpg"
+                alt="Firebase Landing Page"
+            >
+
+            <div class="caption">
+                Firebase web application evidence from Week 7.
+            </div>
+
+        </div>
+
+
+        <div class="image-card">
+
+            <img
+                src="images/protosim/week7/firebase-authentication.jpg"
+                alt="Firebase Authentication"
+            >
+
+            <div class="caption">
+                Firebase authentication evidence from Week 7.
+            </div>
+
+        </div>
+
+
+        <div class="image-card">
+
+            <img
+                src="images/protosim/week7/esp32-web-server.jpg"
+                alt="ESP32 Web Server"
+            >
+
+            <div class="caption">
+                ESP32 local web-server evidence.
+            </div>
+
+        </div>
+
+
+        <div class="image-card">
+
+            <img
+                src="images/protosim/week7/esp32-bulb-control.jpg"
+                alt="ESP32 Bulb Control"
+            >
+
+            <div class="caption">
+                ESP32 bulb-control evidence.
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">09</div>
+
+    <h2>Challenges & Fixes</h2>
+
+    <div class="card">
+
+        <p>
+            I approached the IoT workflow by considering each stage
+            separately: device data collection, cloud communication,
+            database storage and dashboard display.
+        </p>
+
+        <p>
+            The available Week 7 record does not provide specific
+            debugging information for historical logging or CSV export,
+            so unsupported error details have not been added.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">10</div>
+
+    <h2>Reflection</h2>
+
+    <div class="card">
+
+        <p>
+            The IoT learning activities helped me understand how
+            embedded systems, cloud platforms and web applications
+            can work together as a connected system.
+        </p>
+
+        <p>
+            I also gained a better understanding of how device
+            information can be collected, transferred to the cloud
+            and presented through a web interface.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">11</div>
+
+    <h2>Repository Link</h2>
+
+    <div class="card">
+
+        <p>
+            The complete portfolio repository containing this
+            assignment is available below.
+        </p>
+
+        <a
+            class="repo"
+            href="https://github.com/bhuvanashreekr-del/portfoilo"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            View GitHub Repository →
+        </a>
+
+    </div>
+
+</section>
+
 
 </main>
 
@@ -377,6 +626,7 @@
 <footer>
     Firebase Logging & Automation · IoT Learning · Bhuvanashree K R
 </footer>
+
 
 </body>
 </html>

@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Adafruit IO & MQTT | IoT Learning</title>
+
     <link rel="stylesheet" href="iot.css">
+
 </head>
 
 <body>
 
+
 <nav class="navbar">
+
     <div class="nav-container">
-        <div class="logo">Bhuvanashree_KR</div>
+
+        <div class="logo">
+            Bhuvanashree_KR
+        </div>
 
         <div class="nav-links">
+
             <a href="index.html">Home</a>
+
             <a href="about.html">About</a>
+
             <a href="skills.html">Skills</a>
+
             <a href="experience.html">Experience</a>
+
             <a href="protosem.html">ProtoSem</a>
-            <a href="iot.html" class="active">IoT Learning</a>
+
+            <a href="iot.html" class="active">
+                IoT Learning
+            </a>
+
             <a href="contact.html">Contact</a>
+
         </div>
+
     </div>
+
 </nav>
 
 
 <header class="hero">
 
-    <span class="tag">TASK 02 · IoT LEARNING</span>
+    <span class="tag">
+        TASK 02 · IoT LEARNING
+    </span>
 
     <h1>
         Adafruit IO Dashboard <span>& MQTT</span>
     </h1>
 
     <p>
-        Cloud-based IoT communication using Adafruit IO dashboards,
-        feeds and device control.
+        Understanding cloud-based IoT communication using Adafruit IO,
+        feeds, dashboards and MQTT concepts.
     </p>
 
 </header>
@@ -44,290 +69,484 @@
 
 <main class="container">
 
-    <section class="section">
 
-        <div class="section-number">01</div>
-        <h2>Overview</h2>
+<section class="section">
 
-        <div class="card">
+    <div class="section-number">01</div>
 
-            <p>
-                The objective of this task is to understand cloud-based
-                IoT communication and how an IoT device can interact with
-                a dashboard through an online IoT platform.
-            </p>
+    <h2>Overview</h2>
 
-            <p>
-                During Week 7, I configured Adafruit IO feeds and dashboards
-                and worked with Arduino IDE C code to control a bulb remotely
-                through the IoT setup.
-            </p>
+    <div class="card">
 
-        </div>
+        <p>
+            The objective of this assignment was to understand how an
+            IoT device can communicate with a cloud platform and how
+            a dashboard can be used to monitor or control the device.
+        </p>
 
-    </section>
+        <p>
+            During my Week 7 IoT work, I configured Adafruit IO feeds
+            and dashboards and used Arduino IDE C code as part of the
+            ESP32-based bulb-control workflow.
+        </p>
 
+    </div>
 
-    <section class="section">
-
-        <div class="section-number">02</div>
-        <h2>Concepts</h2>
-
-        <div class="grid">
-
-            <div class="info-box">
-                <h3>Adafruit IO</h3>
-                <p>
-                    A cloud-based platform used for connecting devices,
-                    feeds and dashboards.
-                </p>
-            </div>
-
-            <div class="info-box">
-                <h3>MQTT</h3>
-                <p>
-                    A lightweight messaging protocol commonly used for
-                    IoT device communication.
-                </p>
-            </div>
-
-            <div class="info-box">
-                <h3>Feed</h3>
-                <p>
-                    A logical data channel used to exchange IoT information
-                    through the cloud platform.
-                </p>
-            </div>
-
-            <div class="info-box">
-                <h3>Dashboard</h3>
-                <p>
-                    A visual interface used to monitor or control IoT data
-                    and devices.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
+</section>
 
 
-    <section class="section">
+<section class="section">
 
-        <div class="section-number">03</div>
-        <h2>System Design</h2>
+    <div class="section-number">02</div>
 
-        <div class="card">
+    <h2>Concepts</h2>
 
-            <div class="flow">
-
-                <div class="flow-box">ESP32</div>
-
-                <div class="arrow">→</div>
-
-                <div class="flow-box">IoT Cloud</div>
-
-                <div class="arrow">→</div>
-
-                <div class="flow-box">Adafruit IO</div>
-
-                <div class="arrow">→</div>
-
-                <div class="flow-box">Dashboard</div>
-
-            </div>
-
-        </div>
-
-    </section>
+    <div class="grid">
 
 
-    <section class="section">
+        <div class="info-box">
 
-        <div class="section-number">04</div>
-        <h2>Hardware & Software</h2>
-
-        <div class="grid">
-
-            <div class="info-box">
-                <h3>Hardware</h3>
-
-                <ul>
-                    <li>ESP32 development board</li>
-                    <li>Connected bulb / output</li>
-                    <li>Relay-based control hardware</li>
-                </ul>
-            </div>
-
-            <div class="info-box">
-                <h3>Software</h3>
-
-                <ul>
-                    <li>Arduino IDE</li>
-                    <li>Adafruit IO</li>
-                    <li>Adafruit IO Dashboard</li>
-                    <li>IoT communication libraries</li>
-                </ul>
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="section">
-
-        <div class="section-number">05</div>
-        <h2>Wiring / Setup</h2>
-
-        <div class="card">
+            <h3>Adafruit IO</h3>
 
             <p>
-                The hardware was connected so that the ESP32 could control
-                the connected output. The exact GPIO wiring is not specified
-                in the current Week 7 documentation.
-            </p>
-
-            <div class="warning">
-                Exact pin numbers and circuit details should be added from
-                the original hardware setup if available.
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="section">
-
-        <div class="section-number">06</div>
-        <h2>Implementation</h2>
-
-        <div class="card">
-
-            <p>
-                Adafruit IO feeds and dashboards were configured as part
-                of the Week 7 IoT work. Arduino IDE C code was used for
-                the ESP32-based control system, allowing a connected bulb
-                to be controlled remotely.
+                A cloud-based IoT platform that provides feeds and
+                dashboards for connecting and interacting with devices.
             </p>
 
         </div>
 
-    </section>
+
+        <div class="info-box">
+
+            <h3>MQTT</h3>
+
+            <p>
+                A lightweight messaging protocol commonly used for
+                communication between IoT devices and cloud services.
+            </p>
+
+        </div>
 
 
-    <section class="section">
+        <div class="info-box">
 
-        <div class="section-number">07</div>
-        <h2>Configuration</h2>
+            <h3>Feed</h3>
 
-        <div class="card">
+            <p>
+                A communication channel used to exchange IoT values
+                through the cloud platform.
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <h3>Dashboard</h3>
+
+            <p>
+                A visual interface containing controls or displays
+                connected to IoT feeds.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">03</div>
+
+    <h2>System Design</h2>
+
+    <div class="card">
+
+        <div class="flow">
+
+            <div class="flow-box">
+                ESP32
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">
+                Wi-Fi
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">
+                Adafruit IO
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">
+                Dashboard
+            </div>
+
+            <div class="arrow">→</div>
+
+            <div class="flow-box">
+                Output
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">04</div>
+
+    <h2>Hardware & Software</h2>
+
+    <div class="grid">
+
+
+        <div class="info-box">
+
+            <h3>Hardware</h3>
 
             <ul>
-                <li>Adafruit IO account configured.</li>
-                <li>IoT feeds configured.</li>
-                <li>Dashboard created.</li>
-                <li>ESP32 connected to the IoT platform.</li>
-                <li>Remote bulb-control workflow tested.</li>
+
+                <li>ESP32 development board</li>
+
+                <li>Connected bulb / output</li>
+
+                <li>Relay-based control hardware</li>
+
             </ul>
 
         </div>
 
-    </section>
+
+        <div class="info-box">
+
+            <h3>Software</h3>
+
+            <ul>
+
+                <li>Arduino IDE</li>
+
+                <li>Adafruit IO</li>
+
+                <li>Adafruit IO Dashboard</li>
+
+                <li>IoT communication libraries</li>
+
+            </ul>
+
+        </div>
 
 
-    <section class="section">
+    </div>
 
-        <div class="section-number">08</div>
-        <h2>Evidence</h2>
+</section>
 
-        <div class="image-grid">
 
-            <div class="image-card">
+<section class="section">
 
-                <img src="images/protosim/week7/adafruit-dashboard.jpg"
-                     alt="Adafruit IO Dashboard">
+    <div class="section-number">05</div>
 
-                <div class="caption">
-                    Adafruit IO dashboard configured for the IoT control workflow.
-                </div>
+    <h2>Wiring / Setup</h2>
 
+    <div class="card">
+
+        <p>
+            I prepared the ESP32 and connected the required output
+            hardware for the IoT control experiment. The ESP32 was
+            programmed using Arduino IDE.
+        </p>
+
+        <p>
+            The exact GPIO mapping is not available in the current
+            Week 7 record, so unsupported pin numbers have not been
+            added.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">06</div>
+
+    <h2>Implementation Process</h2>
+
+
+    <div class="card">
+
+        <h3>Step 1 — Understanding Cloud-Based IoT</h3>
+
+        <p>
+            I first understood the difference between local device
+            control and cloud-based IoT communication. I learned how
+            an IoT device can exchange information through an online
+            platform.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 2 — Setting Up Adafruit IO</h3>
+
+        <p>
+            I accessed Adafruit IO and explored its dashboard and
+            feed structure. I studied how feeds can act as communication
+            channels between an IoT device and the cloud platform.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 3 — Creating the Feed</h3>
+
+        <p>
+            I configured the required feed for the IoT control process.
+            The feed was used to represent the control information
+            exchanged through the cloud platform.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 4 — Creating the Dashboard</h3>
+
+        <p>
+            I created the Adafruit IO dashboard and added the required
+            control interface. This provided a visual way to interact
+            with the IoT system.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 5 — Understanding MQTT</h3>
+
+        <p>
+            I studied the basic MQTT communication model and understood
+            the roles of publisher, subscriber, broker and topic/feed
+            in IoT communication.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 6 — Programming the ESP32</h3>
+
+        <p>
+            I used Arduino IDE to program the ESP32 and prepare it for
+            communication with the Adafruit IO platform.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 7 — Connecting the Dashboard and Hardware</h3>
+
+        <p>
+            I connected the dashboard control with the corresponding
+            IoT feed and configured the ESP32 to respond to the received
+            control value.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 8 — Testing the Cloud Control</h3>
+
+        <p>
+            I operated the dashboard control and observed the connected
+            bulb response. I tested the control operation to verify
+            that the cloud command was reaching the hardware correctly.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>Step 9 — Final Verification</h3>
+
+        <p>
+            After confirming the operation, I captured the Adafruit IO
+            dashboard and bulb-control screenshots as evidence.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">07</div>
+
+    <h2>Configuration</h2>
+
+    <div class="card">
+
+        <ul>
+
+            <li>Adafruit IO account configured.</li>
+
+            <li>Required feed configured.</li>
+
+            <li>Dashboard created.</li>
+
+            <li>ESP32 connected to the IoT platform.</li>
+
+            <li>Remote bulb-control workflow tested.</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">08</div>
+
+    <h2>Evidence</h2>
+
+    <div class="image-grid">
+
+
+        <div class="image-card">
+
+            <img
+                src="images/protosim/week7/adafruit-dashboard.jpg"
+                alt="Adafruit IO Dashboard"
+            >
+
+            <div class="caption">
+                Adafruit IO dashboard configured during the IoT work.
             </div>
 
+        </div>
 
-            <div class="image-card">
 
-                <img src="images/protosim/week7/bulb-control.jpg"
-                     alt="IoT Bulb Control">
+        <div class="image-card">
 
-                <div class="caption">
-                    Bulb-control demonstration from the Week 7 IoT work.
-                </div>
+            <img
+                src="images/protosim/week7/bulb-control.jpg"
+                alt="IoT Bulb Control"
+            >
 
+            <div class="caption">
+                IoT bulb-control demonstration.
             </div>
 
         </div>
 
-    </section>
+
+    </div>
+
+</section>
 
 
-    <section class="section">
+<section class="section">
 
-        <div class="section-number">09</div>
-        <h2>Challenges & Fixes</h2>
+    <div class="section-number">09</div>
 
-        <div class="card">
+    <h2>Challenges & Fixes</h2>
 
-            <p>
-                The current Week 7 record does not contain detailed
-                troubleshooting notes for the Adafruit IO setup.
-                Specific failures and fixes should only be added from
-                the original project record.
-            </p>
+    <div class="card">
 
-        </div>
+        <p>
+            I checked the communication at each stage of the system:
+            dashboard, cloud feed, ESP32 and physical output.
+            This helped verify where communication was working and
+            whether the final output responded correctly.
+        </p>
 
-    </section>
+        <p>
+            The current Week 7 record does not contain the exact
+            individual error messages, so unsupported error details
+            have not been added.
+        </p>
 
+    </div>
 
-    <section class="section">
-
-        <div class="section-number">10</div>
-        <h2>Reflection</h2>
-
-        <div class="card">
-
-            <p>
-                This activity helped me understand how an embedded device
-                can interact with an IoT cloud platform and how dashboards
-                can be used to control physical hardware remotely.
-            </p>
-
-        </div>
-
-    </section>
+</section>
 
 
-    <section class="section">
+<section class="section">
 
-        <div class="section-number">11</div>
-        <h2>Repository Link</h2>
+    <div class="section-number">10</div>
 
-        <div class="card">
+    <h2>Reflection</h2>
 
-            <p>
-                Add the exact GitHub repository or project-folder link
-                for this assignment here.
-            </p>
+    <div class="card">
 
-            <div class="warning">
-                Replace this section with your actual repository URL.
-            </div>
+        <p>
+            This activity helped me understand how an embedded device
+            can communicate with an IoT cloud platform and how dashboards
+            can be used to interact with physical hardware remotely.
+        </p>
 
-        </div>
+        <p>
+            I also gained practical exposure to the relationship between
+            ESP32 programming, cloud feeds and dashboard-based control.
+        </p>
 
-    </section>
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-number">11</div>
+
+    <h2>Repository Link</h2>
+
+    <div class="card">
+
+        <p>
+            The complete portfolio repository containing this assignment
+            is available below.
+        </p>
+
+        <a
+            class="repo"
+            href="https://github.com/bhuvanashreekr-del/portfoilo"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            View GitHub Repository →
+        </a>
+
+    </div>
+
+</section>
+
 
 </main>
 
@@ -335,6 +554,7 @@
 <footer>
     Adafruit IO & MQTT · IoT Learning · Bhuvanashree K R
 </footer>
+
 
 </body>
 </html>
