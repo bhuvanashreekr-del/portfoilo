@@ -1,970 +1,700 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <title>Adafruit MQTT IoT Control | Bhuvanashree KR</title>
 
-    <title>Adafruit IO MQTT | IoT Learning</title>
-
-    <link
-        rel="stylesheet"
-        href="iot.css"
-    >
-
+    <link rel="stylesheet" href="iot.css">
 </head>
-
 
 <body>
 
+<!-- =========================
+     NAVIGATION
+========================= -->
+<nav class="navbar">
+    <div class="nav-container">
 
-    <!-- ================= NAVIGATION ================= -->
+        <a href="index.html" class="logo">
+            Bhuvanashree_KR
+        </a>
 
-    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="experience.html">Experience</a>
+            <a href="protosem.html">ProtoSem</a>
+            <a href="iot.html" class="active">IoT Learning</a>
+            <a href="contact.html">Contact</a>
+        </div>
 
-        <div class="nav-container">
+    </div>
+</nav>
 
 
-            <div class="logo">
-                Bhuvanashree.KR
+<!-- =========================
+     HERO
+========================= -->
+<header class="hero">
+
+    <span class="tag">IoT Learning — Assignment 02</span>
+
+    <h1>
+        Adafruit IO <span>MQTT</span>
+    </h1>
+
+    <p>
+        Building an IoT cloud-control system using an ESP32,
+        MQTT communication, Adafruit IO and a remotely controlled bulb.
+    </p>
+
+</header>
+
+
+<main class="container">
+
+
+<!-- =========================
+     01 OVERVIEW
+========================= -->
+<section class="section" id="overview">
+
+    <div class="section-number">01</div>
+
+    <h2>Overview</h2>
+
+    <div class="card">
+
+        <p>
+            This assignment focused on understanding how an IoT device can
+            communicate with a cloud platform using the MQTT protocol.
+            I used an ESP32 as the IoT device and Adafruit IO as the cloud
+            platform for sending and receiving control data.
+        </p>
+
+        <br>
+
+        <p>
+            The main practical objective was to control a connected bulb
+            remotely through an Adafruit IO dashboard. The dashboard sends
+            the required control value through MQTT, which is received by
+            the ESP32 and used to control the physical output.
+        </p>
+
+        <br>
+
+        <p>
+            This helped me understand the complete communication path from
+            the cloud dashboard to the microcontroller and finally to the
+            physical output.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     02 CONCEPTS
+========================= -->
+<section class="section" id="concepts">
+
+    <div class="section-number">02</div>
+
+    <h2>Concepts</h2>
+
+    <div class="grid">
+
+        <div class="info-box">
+
+            <h3>MQTT</h3>
+
+            <p>
+                MQTT is a lightweight messaging protocol commonly used
+                in IoT systems. It allows devices and applications to
+                exchange small messages efficiently.
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <h3>Publisher</h3>
+
+            <p>
+                A publisher sends a message to an MQTT communication
+                channel. In this system, the cloud dashboard can publish
+                a control value.
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <h3>Subscriber</h3>
+
+            <p>
+                A subscriber listens for messages from the required
+                communication channel. The ESP32 receives the control
+                information and responds accordingly.
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <h3>Broker</h3>
+
+            <p>
+                The MQTT broker manages communication between publishers
+                and subscribers. Adafruit IO provides the cloud-side
+                MQTT infrastructure used in this assignment.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     03 SYSTEM DESIGN
+========================= -->
+<section class="section" id="system-design">
+
+    <div class="section-number">03</div>
+
+    <h2>System Design</h2>
+
+    <div class="card">
+
+        <p>
+            The system was designed so that the user can operate the
+            physical bulb through a cloud dashboard. The ESP32 connects
+            to the internet and communicates with Adafruit IO using MQTT.
+        </p>
+
+
+        <div class="flow">
+
+            <div class="flow-box">
+                Adafruit IO<br>
+                Dashboard
             </div>
 
+            <div class="arrow">→</div>
 
-            <div class="nav-links">
+            <div class="flow-box">
+                MQTT
+            </div>
 
-                <a href="index.html">
-                    Home
-                </a>
+            <div class="arrow">→</div>
 
-                <a href="about.html">
-                    About
-                </a>
+            <div class="flow-box">
+                Adafruit IO<br>
+                Broker
+            </div>
 
-                <a href="skills.html">
-                    Skills
-                </a>
+            <div class="arrow">→</div>
 
-                <a href="experience.html">
-                    Experience
-                </a>
+            <div class="flow-box">
+                ESP32
+            </div>
 
-                <a href="protosem.html">
-                    ProtoSem
-                </a>
+            <div class="arrow">→</div>
 
-                <a
-                    href="iot.html"
-                    class="active"
-                >
-                    IoT Learning
-                </a>
-
-                <a href="contact.html">
-                    Contact
-                </a>
-
+            <div class="flow-box">
+                Bulb / Output
             </div>
 
         </div>
 
-    </nav>
+    </div>
+
+</section>
 
 
+<!-- =========================
+     04 HARDWARE & SOFTWARE
+========================= -->
+<section class="section" id="hardware">
 
-    <!-- ================= HERO ================= -->
+    <div class="section-number">04</div>
 
-    <header class="hero">
+    <h2>Hardware &amp; Software</h2>
 
-        <span class="tag">
-            IoT Learning • Assignment 02
-        </span>
+    <div class="grid">
+
+        <div class="info-box">
+
+            <h3>Hardware</h3>
+
+            <ul>
+
+                <li>ESP32 development board</li>
+
+                <li>LED / bulb output</li>
+
+                <li>Relay-based switching arrangement where required</li>
+
+                <li>Jumper wires</li>
+
+                <li>Power supply</li>
+
+            </ul>
+
+        </div>
 
 
-        <h1>
-            Adafruit IO <span>MQTT Cloud Control</span>
-        </h1>
+        <div class="info-box">
 
+            <h3>Software &amp; Platforms</h3>
+
+            <ul>
+
+                <li>Arduino IDE</li>
+
+                <li>Adafruit IO</li>
+
+                <li>MQTT communication</li>
+
+                <li>ESP32 libraries</li>
+
+                <li>Web browser</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     05 WIRING / SETUP
+========================= -->
+<section class="section" id="setup">
+
+    <div class="section-number">05</div>
+
+    <h2>Wiring / Setup</h2>
+
+    <div class="card">
 
         <p>
-
-            Connecting an ESP32 with Adafruit IO to understand
-            cloud-based IoT communication and remote output control.
-
+            I first prepared the ESP32 and the output-control circuit.
+            The ESP32 was connected to the required output device so that
+            a control signal from the microcontroller could change the
+            physical output state.
         </p>
 
-    </header>
+        <br>
+
+        <p>
+            After completing the hardware connection, I connected the
+            ESP32 to Wi-Fi and prepared the software environment in
+            Arduino IDE.
+        </p>
+
+        <br>
+
+        <p>
+            The Adafruit IO account and dashboard were then configured
+            so that the ESP32 could exchange control information with
+            the cloud platform through MQTT.
+        </p>
+
+        <div class="warning" style="margin-top:20px;">
+
+            The exact GPIO/pin numbers are intentionally not stated here
+            because the supplied evidence does not identify the final
+            pin mapping.
+
+        </div>
+
+    </div>
+
+</section>
 
 
+<!-- =========================
+     06 IMPLEMENTATION
+========================= -->
+<section class="section" id="implementation">
 
-    <main class="container">
+    <div class="section-number">06</div>
+
+    <h2>Implementation</h2>
+
+    <div class="card">
+
+        <p>
+            I implemented the system in stages rather than testing the
+            entire setup at once.
+        </p>
+
+        <br>
+
+        <ol style="color:var(--muted); padding-left:25px;">
+
+            <li>
+                Prepared the ESP32 hardware and output circuit.
+            </li>
+
+            <li>
+                Installed and opened Arduino IDE for ESP32 programming.
+            </li>
+
+            <li>
+                Connected the ESP32 to the required Wi-Fi network.
+            </li>
+
+            <li>
+                Created and configured the required Adafruit IO
+                dashboard/feed setup.
+            </li>
+
+            <li>
+                Added the MQTT communication logic to the ESP32 program.
+            </li>
+
+            <li>
+                Connected the ESP32 to the Adafruit IO MQTT service.
+            </li>
+
+            <li>
+                Used the dashboard control to send the required value.
+            </li>
+
+            <li>
+                Read the received value in the ESP32 program.
+            </li>
+
+            <li>
+                Changed the physical output according to the received
+                control value.
+            </li>
+
+            <li>
+                Tested both ON and OFF operation.
+            </li>
+
+        </ol>
+
+    </div>
 
 
-        <!-- ================= 01 OVERVIEW ================= -->
+    <div class="card">
 
-        <section class="section">
+        <h3 style="color:var(--accent); margin-bottom:15px;">
+            Communication Flow
+        </h3>
 
-            <div class="section-number">
-                01 / OVERVIEW
+        <div class="flow">
+
+            <div class="flow-box">
+                User
             </div>
 
+            <div class="arrow">→</div>
 
-            <h2>
-                Project Overview
-            </h2>
-
-
-            <div class="card">
-
-                <p>
-
-                    The objective of this assignment was to understand
-                    how an IoT device can communicate with a cloud
-                    platform and receive control commands remotely.
-
-                </p>
-
-
-                <br>
-
-
-                <p>
-
-                    I used an ESP32 together with Adafruit IO to
-                    create a cloud-based control system. The Adafruit IO
-                    dashboard provided the user interface while the
-                    ESP32 acted as the connected IoT device.
-
-                </p>
-
-
-                <br>
-
-
-                <p>
-
-                    This assignment helped me understand the relationship
-                    between an IoT device, MQTT communication, cloud
-                    feeds and a dashboard.
-
-                </p>
-
+            <div class="flow-box">
+                Adafruit IO
             </div>
 
-        </section>
+            <div class="arrow">→</div>
 
-
-
-        <!-- ================= 02 CONCEPTS ================= -->
-
-        <section class="section">
-
-            <div class="section-number">
-                02 / CONCEPTS
+            <div class="flow-box">
+                MQTT
             </div>
 
+            <div class="arrow">→</div>
 
-            <h2>
-                MQTT & Adafruit IO Concepts
-            </h2>
-
-
-            <div class="grid">
-
-
-                <div class="info-box">
-
-                    <h3>
-                        Adafruit IO
-                    </h3>
-
-                    <p>
-
-                        Adafruit IO is a cloud-based IoT platform
-                        that can receive, store and display data
-                        and provide interfaces for connected devices.
-
-                    </p>
-
-                </div>
-
-
-                <div class="info-box">
-
-                    <h3>
-                        MQTT
-                    </h3>
-
-                    <p>
-
-                        MQTT is a lightweight messaging protocol
-                        commonly used for communication between
-                        IoT devices and cloud services.
-
-                    </p>
-
-                </div>
-
-
-                <div class="info-box">
-
-                    <h3>
-                        Publisher
-                    </h3>
-
-                    <p>
-
-                        A publisher sends information or commands
-                        through an MQTT communication channel.
-
-                    </p>
-
-                </div>
-
-
-                <div class="info-box">
-
-                    <h3>
-                        Subscriber
-                    </h3>
-
-                    <p>
-
-                        A subscriber receives information from the
-                        relevant MQTT communication channel.
-
-                    </p>
-
-                </div>
-
-
-                <div class="info-box">
-
-                    <h3>
-                        Broker
-                    </h3>
-
-                    <p>
-
-                        The MQTT broker manages communication between
-                        publishers and subscribers.
-
-                    </p>
-
-                </div>
-
-
-                <div class="info-box">
-
-                    <h3>
-                        Feed
-                    </h3>
-
-                    <p>
-
-                        In Adafruit IO, feeds act as communication
-                        channels for IoT data and control values.
-
-                    </p>
-
-                </div>
-
-
+            <div class="flow-box">
+                ESP32
             </div>
 
-        </section>
+            <div class="arrow">→</div>
 
-
-
-        <!-- ================= 03 SYSTEM DESIGN ================= -->
-
-        <section class="section">
-
-            <div class="section-number">
-                03 / SYSTEM DESIGN
+            <div class="flow-box">
+                Output
             </div>
 
+        </div>
 
-            <h2>
-                IoT Communication Architecture
-            </h2>
+    </div>
 
-
-            <div class="card">
+</section>
 
 
-                <div class="flow">
+<!-- =========================
+     07 CONFIGURATION
+========================= -->
+<section class="section" id="configuration">
+
+    <div class="section-number">07</div>
+
+    <h2>Configuration</h2>
+
+    <div class="card">
+
+        <p>
+            The Adafruit IO environment was configured before testing
+            the hardware control.
+        </p>
+
+        <br>
+
+        <ul>
+
+            <li>
+                Created / accessed the Adafruit IO account.
+            </li>
+
+            <li>
+                Prepared the dashboard for IoT control.
+            </li>
+
+            <li>
+                Configured the required feed used for communication.
+            </li>
+
+            <li>
+                Added the dashboard control element.
+            </li>
+
+            <li>
+                Used the Adafruit IO credentials required by the ESP32
+                MQTT connection.
+            </li>
+
+            <li>
+                Programmed the ESP32 with the required Wi-Fi and MQTT
+                connection details.
+            </li>
+
+        </ul>
+
+        <br>
+
+        <p>
+            Once the ESP32 successfully connected to Adafruit IO, the
+            dashboard could be used to send control values to the device.
+        </p>
+
+    </div>
+
+</section>
 
 
-                    <div class="flow-box">
-                        User
-                    </div>
+<!-- =========================
+     08 EVIDENCE
+========================= -->
+<section class="section" id="evidence">
+
+    <div class="section-number">08</div>
+
+    <h2>Evidence</h2>
+
+    <div class="image-grid">
 
 
-                    <div class="arrow">
-                        →
-                    </div>
+        <!-- IMAGE 01 -->
 
+        <div class="image-card">
 
-                    <div class="flow-box">
-                        Adafruit IO Dashboard
-                    </div>
+            <img
+                src="/portfoilo/adafruit-dashboard.jpeg"
+                alt="Adafruit IO Dashboard"
+                loading="lazy"
+            >
 
-
-                    <div class="arrow">
-                        →
-                    </div>
-
-
-                    <div class="flow-box">
-                        MQTT
-                    </div>
-
-
-                    <div class="arrow">
-                        →
-                    </div>
-
-
-                    <div class="flow-box">
-                        ESP32
-                    </div>
-
-
-                    <div class="arrow">
-                        →
-                    </div>
-
-
-                    <div class="flow-box">
-                        Output
-                    </div>
-
-
-                </div>
-
-
-                <p>
-
-                    A command selected through the Adafruit IO dashboard
-                    is communicated through the cloud using MQTT. The
-                    ESP32 receives the corresponding value and uses it
-                    to control the connected output.
-
-                </p>
-
-
+            <div class="caption">
+                Adafruit IO dashboard configured for the IoT control system.
             </div>
 
-        </section>
+        </div>
 
 
+        <!-- IMAGE 02 -->
 
-        <!-- ================= 04 HARDWARE SOFTWARE ================= -->
+        <div class="image-card">
 
-        <section class="section">
+            <img
+                src="/portfoilo/bulb-control.jpeg"
+                alt="IoT Bulb Control"
+                loading="lazy"
+            >
 
-            <div class="section-number">
-                04 / HARDWARE & SOFTWARE
+            <div class="caption">
+                Physical IoT bulb-control demonstration.
             </div>
 
+        </div>
 
-            <h2>
-                Tools Used
-            </h2>
 
+    </div>
 
-            <div class="grid">
+</section>
 
 
-                <div class="info-box">
+<!-- =========================
+     09 CHALLENGES & FIXES
+========================= -->
+<section class="section" id="challenges">
 
-                    <h3>
-                        Hardware
-                    </h3>
+    <div class="section-number">09</div>
 
+    <h2>Challenges &amp; Fixes</h2>
 
-                    <ul>
+    <div class="card">
 
-                        <li>
-                            ESP32 development board
-                        </li>
+        <p>
+            One important part of troubleshooting was checking the
+            communication path stage by stage instead of assuming that
+            the complete system was working.
+        </p>
 
-                        <li>
-                            Output control circuit
-                        </li>
+        <br>
 
-                        <li>
-                            Connecting wires
-                        </li>
+        <ul>
 
-                        <li>
-                            Computer
-                        </li>
+            <li>
+                <strong>Cloud communication:</strong>
+                Checked whether the Adafruit IO dashboard and feed were
+                communicating correctly.
+            </li>
 
-                    </ul>
+            <li>
+                <strong>ESP32 connection:</strong>
+                Verified whether the ESP32 successfully connected to the
+                network and cloud service.
+            </li>
 
-                </div>
+            <li>
+                <strong>MQTT communication:</strong>
+                Checked whether the ESP32 was receiving the expected
+                control information.
+            </li>
 
+            <li>
+                <strong>Physical output:</strong>
+                Verified the final output after receiving the command.
+            </li>
 
-                <div class="info-box">
+        </ul>
 
-                    <h3>
-                        Software & Platforms
-                    </h3>
+        <br>
 
+        <p>
+            Testing each stage separately made it easier to identify
+            whether a problem was related to the dashboard, cloud
+            communication, ESP32 connection or physical output.
+        </p>
 
-                    <ul>
+    </div>
 
-                        <li>
-                            Arduino IDE
-                        </li>
+</section>
 
-                        <li>
-                            ESP32 board support
-                        </li>
 
-                        <li>
-                            Adafruit IO
-                        </li>
+<!-- =========================
+     10 REFLECTION
+========================= -->
+<section class="section" id="reflection">
 
-                        <li>
-                            Web browser
-                        </li>
+    <div class="section-number">10</div>
 
-                        <li>
-                            MQTT communication
-                        </li>
+    <h2>Reflection</h2>
 
-                    </ul>
+    <div class="card">
 
-                </div>
+        <p>
+            This assignment helped me understand how an IoT device can
+            communicate with a cloud platform instead of operating only
+            locally.
+        </p>
 
+        <br>
 
-            </div>
+        <p>
+            I learned the basic working relationship between an MQTT
+            publisher, subscriber and broker, and understood how a cloud
+            dashboard can be used to control a physical device.
+        </p>
 
-        </section>
+        <br>
 
+        <p>
+            The practical testing also helped me understand that IoT
+            systems need to be checked at every communication stage.
+            A successful dashboard command alone does not guarantee that
+            the physical device will respond correctly.
+        </p>
 
+        <br>
 
-        <!-- ================= 05 WIRING / SETUP ================= -->
+        <p>
+            Overall, this assignment gave me practical experience with
+            ESP32 programming, Adafruit IO, MQTT-based communication and
+            cloud-controlled IoT devices.
+        </p>
 
-        <section class="section">
+    </div>
 
-            <div class="section-number">
-                05 / WIRING / SETUP
-            </div>
+</section>
 
 
-            <h2>
-                Hardware & Cloud Setup
-            </h2>
+<!-- =========================
+     11 REPOSITORY LINK
+========================= -->
+<section class="section" id="repository">
 
+    <div class="section-number">11</div>
 
-            <div class="card">
+    <h2>Repository Link</h2>
 
+    <div class="card">
 
-                <ol
-                    style="
-                        padding-left: 22px;
-                        color: #91a0ad;
-                    "
-                >
+        <p>
+            The assignment page and related portfolio work are maintained
+            in my GitHub repository.
+        </p>
 
-                    <li>
+        <a
+            class="repo"
+            href="https://github.com/bhuvanashreekr-del/portfoilo/blob/master/adafruit-mqtt.html"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            View Adafruit MQTT Assignment on GitHub →
+        </a>
 
-                        I prepared the ESP32 and the connected
-                        output circuit.
+    </div>
 
-                    </li>
+</section>
 
 
-                    <li>
+</main>
 
-                        I checked the physical connections before
-                        starting the cloud communication test.
 
-                    </li>
+<!-- =========================
+     FOOTER
+========================= -->
 
+<footer>
 
-                    <li>
+    Bhuvanashree KR · IoT Learning · Adafruit MQTT
 
-                        I connected the ESP32 to a Wi-Fi network.
-
-                    </li>
-
-
-                    <li>
-
-                        I created the required Adafruit IO account
-                        and opened the cloud dashboard.
-
-                    </li>
-
-
-                    <li>
-
-                        I configured the required feed used for
-                        the control operation.
-
-                    </li>
-
-
-                    <li>
-
-                        I created a dashboard interface so that
-                        the output could be controlled from the cloud.
-
-                    </li>
-
-
-                </ol>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================= 06 IMPLEMENTATION ================= -->
-
-        <section class="section">
-
-            <div class="section-number">
-                06 / IMPLEMENTATION
-            </div>
-
-
-            <h2>
-                Implementation Process
-            </h2>
-
-
-            <div class="card">
-
-
-                <ol
-                    style="
-                        padding-left: 22px;
-                        color: #91a0ad;
-                    "
-                >
-
-                    <li>
-
-                        I opened Arduino IDE and prepared the
-                        ESP32 program.
-
-                    </li>
-
-
-                    <li>
-
-                        The Wi-Fi connection details were configured
-                        so that the ESP32 could access the Internet.
-
-                    </li>
-
-
-                    <li>
-
-                        The Adafruit IO connection details were
-                        configured in the program.
-
-                    </li>
-
-
-                    <li>
-
-                        The ESP32 established communication with
-                        Adafruit IO.
-
-                    </li>
-
-
-                    <li>
-
-                        The ESP32 subscribed to the required cloud
-                        feed so that it could receive control values.
-
-                    </li>
-
-
-                    <li>
-
-                        I operated the control interface from the
-                        Adafruit IO dashboard.
-
-                    </li>
-
-
-                    <li>
-
-                        The dashboard value was transmitted through
-                        the MQTT communication path.
-
-                    </li>
-
-
-                    <li>
-
-                        The ESP32 received the value and changed
-                        the connected output accordingly.
-
-                    </li>
-
-
-                </ol>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================= 07 CONFIGURATION ================= -->
-
-        <section class="section">
-
-            <div class="section-number">
-                07 / CONFIGURATION
-            </div>
-
-
-            <h2>
-                Cloud Control Flow
-            </h2>
-
-
-            <div class="card">
-
-
-                <div class="flow">
-
-
-                    <div class="flow-box">
-                        Adafruit IO
-                    </div>
-
-
-                    <div class="arrow">
-                        →
-                    </div>
-
-
-                    <div class="flow-box">
-                        MQTT Feed
-                    </div>
-
-
-                    <div class="arrow">
-                        →
-                    </div>
-
-
-                    <div class="flow-box">
-                        ESP32
-                    </div>
-
-
-                    <div class="arrow">
-                        →
-                    </div>
-
-
-                    <div class="flow-box">
-                        Output Control
-                    </div>
-
-
-                </div>
-
-
-                <br>
-
-
-                <p>
-
-                    The important difference from the first assignment
-                    is that the control command is now passed through
-                    a cloud IoT platform rather than being limited to
-                    a local ESP32 web server.
-
-                </p>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================= 08 EVIDENCE ================= -->
-
-        <section class="section">
-
-            <div class="section-number">
-                08 / EVIDENCE
-            </div>
-
-
-            <h2>
-                Adafruit IO Evidence
-            </h2>
-
-
-            <div class="image-grid">
-
-
-                <!-- ADAFRUIT DASHBOARD -->
-
-                <div class="image-card">
-
-
-                    <img
-                        src="adafruit-dashboard.jpeg"
-                        alt="Adafruit IO dashboard"
-                    >
-
-
-                    <div class="caption">
-
-                        Adafruit IO Dashboard
-
-                    </div>
-
-
-                </div>
-
-
-
-                <!-- BULB CONTROL -->
-
-                <div class="image-card">
-
-
-                    <img
-                        src="bulb-control.jpeg"
-                        alt="IoT bulb control"
-                    >
-
-
-                    <div class="caption">
-
-                        IoT Bulb Control
-
-                    </div>
-
-
-                </div>
-
-
-            </div>
-
-
-            <br>
-
-
-            <div class="card">
-
-                <p>
-
-                    The Adafruit IO dashboard image provides evidence
-                    of the cloud interface used for the IoT control
-                    activity. The bulb-control image documents the
-                    corresponding output-control stage.
-
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================= 09 CHALLENGES ================= -->
-
-        <section class="section">
-
-            <div class="section-number">
-                09 / CHALLENGES & FIXES
-            </div>
-
-
-            <h2>
-                Problems & Solutions
-            </h2>
-
-
-            <div class="card">
-
-
-                <ul>
-
-
-                    <li>
-
-                        <strong>
-                            Device connectivity:
-                        </strong>
-
-                        The ESP32 required a working Internet connection
-                        before cloud communication could be tested.
-
-                    </li>
-
-
-                    <li>
-
-                        <strong>
-                            Cloud configuration:
-                        </strong>
-
-                        The Adafruit IO dashboard and feed had to be
-                        configured correctly before testing the ESP32.
-
-                    </li>
-
-
-                    <li>
-
-                        <strong>
-                            Command verification:
-                        </strong>
-
-                        I tested the cloud control and checked whether
-                        the connected output responded to the received
-                        command.
-
-                    </li>
-
-
-                </ul>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================= 10 REFLECTION ================= -->
-
-        <section class="section">
-
-            <div class="section-number">
-                10 / REFLECTION
-            </div>
-
-
-            <h2>
-                What I Learned
-            </h2>
-
-
-            <div class="card">
-
-
-                <p>
-
-                    This assignment helped me understand how an IoT
-                    device can communicate with a cloud platform
-                    instead of depending only on a local network.
-
-                </p>
-
-
-                <br>
-
-
-                <p>
-
-                    I learned the basic role of MQTT communication,
-                    publisher and subscriber concepts, cloud feeds
-                    and dashboard-based device control.
-
-                </p>
-
-
-                <br>
-
-
-                <p>
-
-                    The activity also gave me practical experience
-                    connecting an ESP32-based embedded system with
-                    an IoT cloud platform.
-
-                </p>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================= 11 REPOSITORY ================= -->
-
-        <section class="section">
-
-            <div class="section-number">
-                11 / REPOSITORY LINK
-            </div>
-
-
-            <h2>
-                Project Repository
-            </h2>
-
-
-            <div class="card">
-
-
-                <p>
-
-                    This assignment page is maintained as part of
-                    my IoT Learning portfolio.
-
-                </p>
-
-
-                <a
-                    class="repo"
-                    href="https://github.com/bhuvanashreekr-del/portfoilo/blob/master/adafruit-mqtt.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    View Assignment on GitHub →
-
-                </a>
-
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        IoT Learning • Adafruit IO MQTT • Bhuvanashree K R
-
-    </footer>
+</footer>
 
 
 </body>
-
 </html>
