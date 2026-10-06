@@ -1,572 +1,923 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>ESP32 Web Server | IoT Learning</title>
 
-    <link rel="stylesheet" href="iot.css">
+    <link
+        rel="stylesheet"
+        href="iot.css"
+    >
+
 </head>
+
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
 
-<nav class="navbar">
+    <!-- ================= NAVIGATION ================= -->
 
-    <div class="nav-container">
+    <nav class="navbar">
 
-        <div class="logo">
-            Bhuvanashree_KR
-        </div>
+        <div class="nav-container">
 
-        <div class="nav-links">
-
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html">Skills</a>
-            <a href="experience.html">Experience</a>
-            <a href="protosem.html">ProtoSem</a>
-            <a href="iot.html" class="active">IoT Learning</a>
-            <a href="contact.html">Contact</a>
-
-        </div>
-
-    </div>
-
-</nav>
-
-
-<!-- ================= HERO ================= -->
-
-<header class="hero">
-
-    <span class="tag">
-        TASK 01 · IoT LEARNING
-    </span>
-
-    <h1>
-        ESP32 Web Server & <span>HTML LED Control</span>
-    </h1>
-
-    <p>
-        Understanding how an ESP32 can communicate through Wi-Fi,
-        host a local web server and control connected hardware
-        through an HTML-based interface.
-    </p>
-
-</header>
-
-
-<main class="container">
-
-
-<!-- ================= 01 OVERVIEW ================= -->
-
-<section class="section">
-
-    <div class="section-number">01</div>
-
-    <h2>Overview</h2>
-
-    <div class="card">
-
-        <p>
-            The objective of this assignment was to understand how an
-            ESP32 can be used as a connected embedded device and how
-            a web interface can be used to control hardware.
-        </p>
-
-        <p>
-            I worked with the ESP32 using Arduino IDE and explored
-            communication between the microcontroller and a browser.
-            The final workflow connected a browser-based interface
-            with the ESP32 and a physical output.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- ================= 02 CONCEPTS ================= -->
-
-<section class="section">
-
-    <div class="section-number">02</div>
-
-    <h2>Concepts</h2>
-
-    <div class="grid">
-
-        <div class="info-box">
-
-            <h3>ESP32</h3>
-
-            <p>
-                A microcontroller platform with built-in wireless
-                communication capabilities that can be used for
-                embedded and IoT applications.
-            </p>
-
-        </div>
-
-
-        <div class="info-box">
-
-            <h3>Wi-Fi Communication</h3>
-
-            <p>
-                Wi-Fi allows the ESP32 to communicate with other
-                devices over a network and makes browser-based
-                interaction possible.
-            </p>
-
-        </div>
-
-
-        <div class="info-box">
-
-            <h3>Web Server</h3>
-
-            <p>
-                A web server running on the ESP32 can receive browser
-                requests and respond with a web page or perform
-                hardware-related actions.
-            </p>
-
-        </div>
-
-
-        <div class="info-box">
-
-            <h3>HTML Interface</h3>
-
-            <p>
-                HTML can be used to create buttons and controls that
-                provide a simple interface for interacting with
-                the embedded system.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= 03 SYSTEM DESIGN ================= -->
-
-<section class="section">
-
-    <div class="section-number">03</div>
-
-    <h2>System Design</h2>
-
-    <div class="card">
-
-        <div class="flow">
-
-            <div class="flow-box">
-                User Device
+            <div class="logo">
+                Bhuvanashree.KR
             </div>
 
-            <div class="arrow">→</div>
 
-            <div class="flow-box">
-                Web Browser
-            </div>
+            <div class="nav-links">
 
-            <div class="arrow">→</div>
+                <a href="index.html">
+                    Home
+                </a>
 
-            <div class="flow-box">
-                ESP32 Web Server
-            </div>
+                <a href="about.html">
+                    About
+                </a>
 
-            <div class="arrow">→</div>
+                <a href="skills.html">
+                    Skills
+                </a>
 
-            <div class="flow-box">
-                Physical Output
+                <a href="experience.html">
+                    Experience
+                </a>
+
+                <a href="protosem.html">
+                    ProtoSem
+                </a>
+
+                <a
+                    href="iot.html"
+                    class="active"
+                >
+                    IoT Learning
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </nav>
 
 
-<!-- ================= 04 HARDWARE & SOFTWARE ================= -->
 
-<section class="section">
+    <!-- ================= HERO ================= -->
 
-    <div class="section-number">04</div>
+    <header class="hero">
 
-    <h2>Hardware & Software</h2>
-
-    <div class="grid">
-
-        <div class="info-box">
-
-            <h3>Hardware</h3>
-
-            <ul>
-
-                <li>ESP32 development board</li>
-
-                <li>LED / output device</li>
-
-                <li>Relay-driven bulb setup</li>
-
-                <li>USB connection</li>
-
-            </ul>
-
-        </div>
+        <span class="tag">
+            IoT Learning • Assignment 01
+        </span>
 
 
-        <div class="info-box">
+        <h1>
+            ESP32 <span>Local Web Server</span>
+        </h1>
 
-            <h3>Software</h3>
-
-            <ul>
-
-                <li>Arduino IDE</li>
-
-                <li>ESP32 board support</li>
-
-                <li>HTML</li>
-
-                <li>CSS</li>
-
-                <li>Web browser</li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= 05 WIRING ================= -->
-
-<section class="section">
-
-    <div class="section-number">05</div>
-
-    <h2>Wiring / Setup</h2>
-
-    <div class="card">
 
         <p>
-            I connected the ESP32 to the computer and prepared the
-            required hardware for the output-control experiment.
-            The ESP32 was programmed through Arduino IDE.
+
+            Development of a local web interface using ESP32
+            to control an output device through a browser
+            over Wi-Fi.
+
         </p>
 
-        <p>
-            The exact GPIO pin numbers are not available in the current
-            Week 7 documentation, so I have not added unsupported
-            pin numbers here.
-        </p>
+    </header>
 
-        <div class="warning">
 
-            Exact GPIO and circuit details can be added if they are
-            available in the original circuit/code record.
 
-        </div>
+    <main class="container">
 
-    </div>
 
-</section>
+        <!-- ================= 01 OVERVIEW ================= -->
 
+        <section class="section">
 
-<!-- ================= 06 IMPLEMENTATION ================= -->
-
-<section class="section">
-
-    <div class="section-number">06</div>
-
-    <h2>Implementation Process</h2>
-
-
-    <div class="card">
-
-        <h3>Step 1 — Understanding the Requirement</h3>
-
-        <p>
-            I first understood how an ESP32 could be used to communicate
-            with a web browser and control a physical output through
-            a web-based interface.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 2 — Setting Up the ESP32</h3>
-
-        <p>
-            I connected the ESP32 to my computer and opened Arduino IDE.
-            I selected the required ESP32 board and communication port
-            and prepared the development environment for programming.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 3 — Establishing Wi-Fi Communication</h3>
-
-        <p>
-            I configured the ESP32 to connect to the available Wi-Fi
-            network. I used the Serial Monitor to check whether the
-            board was successfully connecting and communicating.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 4 — Creating the Local Web Server</h3>
-
-        <p>
-            After establishing communication, I configured the ESP32
-            to operate as a local web server. The ESP32 was programmed
-            to receive requests from a browser and provide a web
-            interface.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 5 — Creating the HTML Control Interface</h3>
-
-        <p>
-            I created an HTML-based interface containing controls for
-            the connected output. This allowed me to interact with
-            the hardware through a browser instead of directly
-            changing the hardware state from the Arduino IDE.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 6 — Connecting the Interface to the Hardware</h3>
-
-        <p>
-            I programmed the ESP32 to process the browser requests and
-            change the corresponding output state. The browser command
-            was therefore converted into a physical hardware action.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 7 — Testing</h3>
-
-        <p>
-            I opened the ESP32 web interface from a connected device
-            and tested the available controls. I checked whether the
-            command reached the ESP32 and whether the connected output
-            responded correctly.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 8 — Final Verification</h3>
-
-        <p>
-            After verifying the operation, I captured the ESP32
-            web-server and bulb-control screenshots as evidence of
-            the working setup.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- ================= 07 CONFIGURATION ================= -->
-
-<section class="section">
-
-    <div class="section-number">07</div>
-
-    <h2>Configuration</h2>
-
-    <div class="card">
-
-        <ul>
-
-            <li>ESP32 board configured in Arduino IDE.</li>
-
-            <li>Required communication port selected.</li>
-
-            <li>Wi-Fi connection configured.</li>
-
-            <li>Local web-server functionality implemented.</li>
-
-            <li>HTML control interface created.</li>
-
-            <li>Output-control workflow tested.</li>
-
-        </ul>
-
-    </div>
-
-</section>
-
-
-<!-- ================= 08 EVIDENCE ================= -->
-
-<section class="section">
-
-    <div class="section-number">08</div>
-
-    <h2>Evidence</h2>
-
-    <div class="image-grid">
-
-        <div class="image-card">
-
-            <img
-                src="images/protosim/week7/esp32-web-server.jpg"
-                alt="ESP32 Web Server"
-            >
-
-            <div class="caption">
-                ESP32 configured as a local web server.
+            <div class="section-number">
+                01 / OVERVIEW
             </div>
 
-        </div>
+
+            <h2>
+                Project Overview
+            </h2>
 
 
-        <div class="image-card">
+            <div class="card">
 
-            <img
-                src="images/protosim/week7/esp32-bulb-control.jpg"
-                alt="ESP32 Bulb Control"
-            >
+                <p>
 
-            <div class="caption">
-                ESP32-based web interface used for bulb control.
+                    The objective of this assignment was to understand
+                    how an ESP32 can work as a local web server and
+                    provide a browser-based interface for controlling
+                    an electronic output.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    I worked with the ESP32, programmed it using
+                    Arduino IDE, connected it to a Wi-Fi network and
+                    created a simple web interface. The interface was
+                    used to send commands from a browser to the ESP32
+                    and control the connected output.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    This helped me understand the relationship between
+                    embedded hardware, networking, HTTP requests and
+                    a web interface.
+
+                </p>
+
             </div>
 
-        </div>
-
-    </div>
-
-</section>
+        </section>
 
 
-<!-- ================= 09 CHALLENGES ================= -->
 
-<section class="section">
+        <!-- ================= 02 CONCEPTS ================= -->
 
-    <div class="section-number">09</div>
+        <section class="section">
 
-    <h2>Challenges & Fixes</h2>
-
-    <div class="card">
-
-        <p>
-            During the development process, I had to verify the
-            communication between the browser, ESP32 and the physical
-            output. I tested each part separately before confirming
-            the complete workflow.
-        </p>
-
-        <p>
-            The current Week 7 record does not contain the exact
-            individual debugging errors, so specific error messages
-            have not been added here.
-        </p>
-
-    </div>
-
-</section>
+            <div class="section-number">
+                02 / CONCEPTS
+            </div>
 
 
-<!-- ================= 10 REFLECTION ================= -->
-
-<section class="section">
-
-    <div class="section-number">10</div>
-
-    <h2>Reflection</h2>
-
-    <div class="card">
-
-        <p>
-            This assignment helped me understand how an embedded
-            microcontroller can communicate with a browser and connect
-            software interaction with physical hardware.
-        </p>
-
-        <p>
-            I also gained practical understanding of how an ESP32 can
-            be used beyond basic input and output experiments by
-            connecting it with a web-based interface.
-        </p>
-
-    </div>
-
-</section>
+            <h2>
+                Concepts Learned
+            </h2>
 
 
-<!-- ================= 11 REPOSITORY ================= -->
-
-<section class="section">
-
-    <div class="section-number">11</div>
-
-    <h2>Repository Link</h2>
-
-    <div class="card">
-
-        <p>
-            The complete portfolio repository containing this
-            assignment is available below.
-        </p>
-
-        <a
-            class="repo"
-            href="https://github.com/bhuvanashreekr-del/portfoilo"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            View GitHub Repository →
-        </a>
-
-    </div>
-
-</section>
+            <div class="grid">
 
 
-</main>
+                <div class="info-box">
+
+                    <h3>
+                        ESP32
+                    </h3>
+
+                    <p>
+
+                        ESP32 is a microcontroller with built-in
+                        Wi-Fi connectivity that can be used for
+                        embedded IoT applications.
+
+                    </p>
+
+                </div>
 
 
-<footer>
-    ESP32 Web Server · IoT Learning · Bhuvanashree K R
-</footer>
+                <div class="info-box">
+
+                    <h3>
+                        Web Server
+                    </h3>
+
+                    <p>
+
+                        A web server receives requests from a client
+                        and provides an appropriate response. In this
+                        project, the ESP32 acts as the local web server.
+
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Wi-Fi Communication
+                    </h3>
+
+                    <p>
+
+                        The ESP32 connects to Wi-Fi so that a browser
+                        connected to the same network can communicate
+                        with it.
+
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        HTTP Communication
+                    </h3>
+
+                    <p>
+
+                        Browser actions generate requests to the ESP32.
+                        The ESP32 processes the request and changes
+                        the required output.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 03 SYSTEM DESIGN ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                03 / SYSTEM DESIGN
+            </div>
+
+
+            <h2>
+                System Architecture
+            </h2>
+
+
+            <div class="card">
+
+
+                <div class="flow">
+
+
+                    <div class="flow-box">
+                        ESP32
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Wi-Fi Network
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Web Browser
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Control Command
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        ESP32 Output
+                    </div>
+
+
+                </div>
+
+
+                <p>
+
+                    The browser acts as the user interface. When the
+                    user selects an ON or OFF command, the request
+                    reaches the ESP32 web server. The ESP32 processes
+                    the request and changes the output state.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 04 HARDWARE SOFTWARE ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                04 / HARDWARE & SOFTWARE
+            </div>
+
+
+            <h2>
+                Tools Used
+            </h2>
+
+
+            <div class="grid">
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Hardware
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            ESP32 development board
+                        </li>
+
+                        <li>
+                            Output / LED control circuit
+                        </li>
+
+                        <li>
+                            Connecting wires
+                        </li>
+
+                        <li>
+                            Computer for programming
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Software
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            Arduino IDE
+                        </li>
+
+                        <li>
+                            ESP32 board package
+                        </li>
+
+                        <li>
+                            Web browser
+                        </li>
+
+                        <li>
+                            Wi-Fi network
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 05 WIRING / SETUP ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                05 / WIRING / SETUP
+            </div>
+
+
+            <h2>
+                Hardware Setup
+            </h2>
+
+
+            <div class="card">
+
+                <p>
+
+                    I first prepared the ESP32 hardware and connected
+                    the required output circuit. The connections were
+                    checked before uploading the program.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    After the hardware was ready, I connected the ESP32
+                    to the required Wi-Fi network. The ESP32 then
+                    provided a local network address that could be
+                    accessed through a browser connected to the same
+                    network.
+
+                </p>
+
+
+                <br>
+
+
+                <div class="warning">
+
+                    The exact GPIO number is not stated here because
+                    the supplied evidence does not establish the
+                    physical pin number. The portfolio therefore avoids
+                    inventing a pin assignment.
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 06 IMPLEMENTATION ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                06 / IMPLEMENTATION
+            </div>
+
+
+            <h2>
+                Development Process
+            </h2>
+
+
+            <div class="card">
+
+
+                <ol
+                    style="
+                        padding-left: 22px;
+                        color: #91a0ad;
+                    "
+                >
+
+                    <li>
+
+                        I opened Arduino IDE and selected the
+                        ESP32 board.
+
+                    </li>
+
+
+                    <li>
+
+                        I prepared the ESP32 web-server program.
+
+                    </li>
+
+
+                    <li>
+
+                        The Wi-Fi credentials were configured
+                        in the program.
+
+                    </li>
+
+
+                    <li>
+
+                        The ESP32 was programmed to start a
+                        local web server.
+
+                    </li>
+
+
+                    <li>
+
+                        I created a basic HTML control interface
+                        containing ON and OFF controls.
+
+                    </li>
+
+
+                    <li>
+
+                        The browser sent a request when a control
+                        button was selected.
+
+                    </li>
+
+
+                    <li>
+
+                        The ESP32 received the request and processed
+                        the corresponding command.
+
+                    </li>
+
+
+                    <li>
+
+                        The output state was changed according to
+                        the selected command.
+
+                    </li>
+
+
+                </ol>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 07 CONFIGURATION ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                07 / CONFIGURATION
+            </div>
+
+
+            <h2>
+                Browser Control Flow
+            </h2>
+
+
+            <div class="card">
+
+
+                <div class="flow">
+
+
+                    <div class="flow-box">
+                        User
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Browser
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        ESP32 IP Address
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        ESP32 Web Server
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Output Control
+                    </div>
+
+
+                </div>
+
+
+                <br>
+
+
+                <p>
+
+                    This configuration allowed the ESP32 to be
+                    controlled locally through a browser without
+                    requiring a separate cloud dashboard.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 08 EVIDENCE ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                08 / EVIDENCE
+            </div>
+
+
+            <h2>
+                Physical & Web Interface Evidence
+            </h2>
+
+
+            <div class="image-grid">
+
+
+                <!-- ESP32 ON -->
+
+                <div class="image-card">
+
+
+                    <img
+                        src="esp32-webserver-on.jpeg"
+                        alt="ESP32 Web Server output ON"
+                    >
+
+
+                    <div class="caption">
+
+                        ESP32 Web Server — Output ON
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ESP32 OFF -->
+
+                <div class="image-card">
+
+
+                    <img
+                        src="esp32-webserver-off.jpeg"
+                        alt="ESP32 Web Server output OFF"
+                    >
+
+
+                    <div class="caption">
+
+                        ESP32 Web Server — Output OFF
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <br>
+
+
+            <div class="card">
+
+                <p>
+
+                    The two photographs document the ON and OFF
+                    states of the ESP32-controlled output and provide
+                    practical evidence of the local web-control
+                    implementation.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 09 CHALLENGES ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                09 / CHALLENGES & FIXES
+            </div>
+
+
+            <h2>
+                Problems & Fixes
+            </h2>
+
+
+            <div class="card">
+
+
+                <ul>
+
+
+                    <li>
+
+                        <strong>
+                            Wi-Fi communication:
+                        </strong>
+
+                        The ESP32 and the device accessing the
+                        web interface had to be connected correctly
+                        for local communication.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Hardware verification:
+                        </strong>
+
+                        The physical connections had to be checked
+                        before testing the control commands.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Web interface testing:
+                        </strong>
+
+                        The ESP32 local network address had to be
+                        accessed correctly from the browser.
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 10 REFLECTION ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                10 / REFLECTION
+            </div>
+
+
+            <h2>
+                What I Learned
+            </h2>
+
+
+            <div class="card">
+
+
+                <p>
+
+                    Through this assignment, I understood how an
+                    ESP32 can be used beyond simple hardware control
+                    by providing a browser-based interface.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    I learned how embedded hardware, Wi-Fi networking,
+                    HTTP requests and an HTML interface can work
+                    together as an IoT system.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    This assignment provided the foundation for the
+                    later cloud-based IoT work using Adafruit IO
+                    and Firebase.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 11 REPOSITORY ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                11 / REPOSITORY LINK
+            </div>
+
+
+            <h2>
+                Project Repository
+            </h2>
+
+
+            <div class="card">
+
+
+                <p>
+
+                    This assignment page is maintained as part of
+                    my IoT Learning portfolio.
+
+                </p>
+
+
+                <a
+                    class="repo"
+                    href="https://github.com/bhuvanashreekr-del/portfoilo/blob/master/esp32-web-server.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    View Assignment on GitHub →
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        IoT Learning • ESP32 Web Server • Bhuvanashree K R
+
+    </footer>
 
 
 </body>
+
 </html>

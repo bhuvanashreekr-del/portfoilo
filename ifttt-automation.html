@@ -5,12 +5,17 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>IFTTT Automation | IoT Learning</title>
+    <title>IoT Automation | IoT Learning</title>
 
-    <link rel="stylesheet" href="iot.css">
+    <link
+        rel="stylesheet"
+        href="iot.css"
+    >
 
 </head>
 
@@ -18,560 +23,949 @@
 <body>
 
 
-<nav class="navbar">
+    <!-- ================= NAVIGATION ================= -->
 
-    <div class="nav-container">
+    <nav class="navbar">
 
-        <div class="logo">
-            Bhuvanashree_KR
-        </div>
+        <div class="nav-container">
 
-        <div class="nav-links">
 
-            <a href="index.html">Home</a>
-
-            <a href="about.html">About</a>
-
-            <a href="skills.html">Skills</a>
-
-            <a href="experience.html">Experience</a>
-
-            <a href="protosem.html">ProtoSem</a>
-
-            <a href="iot.html" class="active">
-                IoT Learning
-            </a>
-
-            <a href="contact.html">Contact</a>
-
-        </div>
-
-    </div>
-
-</nav>
-
-
-<header class="hero">
-
-    <span class="tag">
-        TASK 03 · IoT LEARNING
-    </span>
-
-    <h1>
-        IFTTT + Adafruit IO <span>IoT Automation</span>
-    </h1>
-
-    <p>
-        Understanding trigger-based IoT automation and how cloud
-        services can be connected to an embedded device workflow.
-    </p>
-
-</header>
-
-
-<main class="container">
-
-
-<section class="section">
-
-    <div class="section-number">01</div>
-
-    <h2>Overview</h2>
-
-    <div class="card">
-
-        <p>
-            This assignment focuses on understanding IoT automation,
-            where an event can trigger an action through connected
-            online services.
-        </p>
-
-        <p>
-            The work is connected conceptually with the ESP32 and
-            Adafruit IO workflow explored during the IoT learning
-            activities.
-        </p>
-
-        <div class="warning">
-
-            The current Week 7 record does not contain the exact
-            IFTTT trigger and action configuration. Therefore,
-            specific unsupported trigger details are not claimed.
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="section">
-
-    <div class="section-number">02</div>
-
-    <h2>Concepts</h2>
-
-    <div class="grid">
-
-
-        <div class="info-box">
-
-            <h3>Automation</h3>
-
-            <p>
-                Automation allows a system to perform an action
-                automatically when a predefined condition or event
-                occurs.
-            </p>
-
-        </div>
-
-
-        <div class="info-box">
-
-            <h3>Trigger</h3>
-
-            <p>
-                A trigger is the event that starts an automated
-                workflow.
-            </p>
-
-        </div>
-
-
-        <div class="info-box">
-
-            <h3>Action</h3>
-
-            <p>
-                An action is the operation performed after the
-                trigger occurs.
-            </p>
-
-        </div>
-
-
-        <div class="info-box">
-
-            <h3>IFTTT</h3>
-
-            <p>
-                IFTTT follows the basic automation concept of
-                connecting an event with a resulting action.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<section class="section">
-
-    <div class="section-number">03</div>
-
-    <h2>System Design</h2>
-
-    <div class="card">
-
-        <div class="flow">
-
-            <div class="flow-box">
-                Trigger
+            <div class="logo">
+                Bhuvanashree.KR
             </div>
 
-            <div class="arrow">→</div>
 
-            <div class="flow-box">
-                IFTTT
-            </div>
+            <div class="nav-links">
 
-            <div class="arrow">→</div>
+                <a href="index.html">
+                    Home
+                </a>
 
-            <div class="flow-box">
-                Adafruit IO
-            </div>
+                <a href="about.html">
+                    About
+                </a>
 
-            <div class="arrow">→</div>
+                <a href="skills.html">
+                    Skills
+                </a>
 
-            <div class="flow-box">
-                ESP32
-            </div>
+                <a href="experience.html">
+                    Experience
+                </a>
 
-            <div class="arrow">→</div>
+                <a href="protosem.html">
+                    ProtoSem
+                </a>
 
-            <div class="flow-box">
-                Output
+                <a
+                    href="iot.html"
+                    class="active"
+                >
+                    IoT Learning
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </nav>
 
 
-<section class="section">
 
-    <div class="section-number">04</div>
+    <!-- ================= HERO ================= -->
 
-    <h2>Hardware & Software</h2>
+    <header class="hero">
 
-    <div class="grid">
-
-
-        <div class="info-box">
-
-            <h3>Hardware</h3>
-
-            <ul>
-
-                <li>ESP32</li>
-
-                <li>Connected output hardware</li>
-
-            </ul>
-
-        </div>
+        <span class="tag">
+            IoT Learning • Assignment 03
+        </span>
 
 
-        <div class="info-box">
+        <h1>
+            IoT <span>Automation</span>
+        </h1>
 
-            <h3>Software / Platforms</h3>
-
-            <ul>
-
-                <li>Arduino IDE</li>
-
-                <li>Adafruit IO</li>
-
-                <li>IFTTT concept</li>
-
-            </ul>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<section class="section">
-
-    <div class="section-number">05</div>
-
-    <h2>Wiring / Setup</h2>
-
-    <div class="card">
 
         <p>
-            The available IoT setup included an ESP32 and connected
-            output hardware. The exact wiring details are not recorded
-            in the current Week 7 material.
+
+            Understanding automated IoT workflows by connecting
+            triggers, cloud services and device actions.
+
         </p>
 
-    </div>
+    </header>
 
-</section>
 
 
-<section class="section">
+    <main class="container">
 
-    <div class="section-number">06</div>
 
-    <h2>Implementation Process</h2>
+        <!-- ================= 01 OVERVIEW ================= -->
 
+        <section class="section">
 
-    <div class="card">
-
-        <h3>Step 1 — Understanding IoT Automation</h3>
-
-        <p>
-            I first understood how IoT automation can connect an event
-            with a predefined action. Instead of manually performing
-            every operation, the system can respond automatically
-            to a defined trigger.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 2 — Understanding IFTTT</h3>
-
-        <p>
-            I studied the basic IFTTT workflow based on the concept
-            of <strong>IF THIS → THEN THAT</strong>. The first part
-            represents the trigger and the second part represents
-            the resulting action.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 3 — Identifying the Trigger</h3>
-
-        <p>
-            I studied how the event that starts the automation can be
-            identified and passed into the connected IoT workflow.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 4 — Defining the Action</h3>
-
-        <p>
-            I studied how the required response can be defined after
-            the trigger occurs and how that action can be connected
-            to the IoT control system.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 5 — Connecting the IoT Cloud Service</h3>
-
-        <p>
-            I studied how the automation workflow can interact with
-            Adafruit IO and how the cloud platform can form part of
-            the communication path between the automation service
-            and the ESP32.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 6 — Connecting the ESP32</h3>
-
-        <p>
-            I connected the automation concept with the ESP32-based
-            IoT workflow so that a cloud command could ultimately
-            affect the connected output.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 7 — Testing the Workflow</h3>
-
-        <p>
-            I studied the workflow stage by stage and checked the
-            trigger, cloud communication and device response.
-        </p>
-
-        <div class="flow">
-
-            <div class="flow-box">Trigger</div>
-
-            <div class="arrow">→</div>
-
-            <div class="flow-box">IFTTT</div>
-
-            <div class="arrow">→</div>
-
-            <div class="flow-box">Adafruit IO</div>
-
-            <div class="arrow">→</div>
-
-            <div class="flow-box">ESP32</div>
-
-            <div class="arrow">→</div>
-
-            <div class="flow-box">Output</div>
-
-        </div>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 8 — Verification</h3>
-
-        <p>
-            I used the existing Adafruit IO, ESP32 and bulb-control
-            evidence to document the IoT portion of the workflow.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section class="section">
-
-    <div class="section-number">07</div>
-
-    <h2>Configuration</h2>
-
-    <div class="card">
-
-        <p>
-            The available evidence supports the Adafruit IO and ESP32
-            portions of the IoT workflow. The exact IFTTT trigger,
-            action and Applet configuration are not available in the
-            current Week 7 record.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section class="section">
-
-    <div class="section-number">08</div>
-
-    <h2>Evidence</h2>
-
-    <div class="image-grid">
-
-
-        <div class="image-card">
-
-            <img
-                src="images/protosim/week7/adafruit-dashboard.jpg"
-                alt="Adafruit IO Dashboard"
-            >
-
-            <div class="caption">
-                Adafruit IO dashboard evidence.
+            <div class="section-number">
+                01 / OVERVIEW
             </div>
 
-        </div>
+
+            <h2>
+                Project Overview
+            </h2>
 
 
-        <div class="image-card">
+            <div class="card">
 
-            <img
-                src="images/protosim/week7/bulb-control.jpg"
-                alt="Bulb Control"
-            >
+                <p>
 
-            <div class="caption">
-                IoT bulb-control evidence.
+                    The objective of this assignment was to understand
+                    automation in an IoT system and how an event or
+                    condition can be used to initiate an action.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    I studied how an IoT device, a cloud platform and
+                    an automation service can work together instead of
+                    requiring every operation to be performed manually.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    The automation concept can be represented as a
+                    sequence in which a trigger starts a workflow,
+                    the automation service processes it and an action
+                    is performed on the IoT system.
+
+                </p>
+
             </div>
 
-        </div>
+        </section>
 
 
-        <div class="image-card">
 
-            <img
-                src="images/protosim/week7/esp32-bulb-control.jpg"
-                alt="ESP32 Bulb Control"
-            >
+        <!-- ================= 02 CONCEPTS ================= -->
 
-            <div class="caption">
-                ESP32-based bulb-control evidence.
+        <section class="section">
+
+            <div class="section-number">
+                02 / CONCEPTS
             </div>
 
-        </div>
+
+            <h2>
+                Automation Concepts
+            </h2>
 
 
-    </div>
-
-</section>
+            <div class="grid">
 
 
-<section class="section">
+                <div class="info-box">
 
-    <div class="section-number">09</div>
+                    <h3>
+                        IoT Automation
+                    </h3>
 
-    <h2>Challenges & Fixes</h2>
+                    <p>
 
-    <div class="card">
+                        Automation allows an IoT system to perform
+                        an action based on a predefined event or
+                        condition without requiring continuous
+                        manual operation.
 
-        <p>
-            I approached the automation workflow by checking each
-            communication stage separately: trigger, cloud service,
-            ESP32 and physical output.
-        </p>
+                    </p>
 
-        <p>
-            The current Week 7 record does not contain the exact
-            IFTTT troubleshooting errors, so specific errors have
-            not been invented.
-        </p>
-
-    </div>
-
-</section>
+                </div>
 
 
-<section class="section">
+                <div class="info-box">
 
-    <div class="section-number">10</div>
+                    <h3>
+                        Trigger
+                    </h3>
 
-    <h2>Reflection</h2>
+                    <p>
 
-    <div class="card">
+                        A trigger is the event or condition that
+                        starts an automation workflow.
 
-        <p>
-            This activity helped me understand the basic structure of
-            automated IoT systems and how events can be connected to
-            actions through cloud services.
-        </p>
+                    </p>
 
-        <p>
-            It also helped me connect the concepts of ESP32 programming,
-            cloud communication and remote device control.
-        </p>
-
-    </div>
-
-</section>
+                </div>
 
 
-<section class="section">
+                <div class="info-box">
 
-    <div class="section-number">11</div>
+                    <h3>
+                        Action
+                    </h3>
 
-    <h2>Repository Link</h2>
+                    <p>
 
-    <div class="card">
+                        An action is the operation performed after
+                        the trigger condition is satisfied.
 
-        <p>
-            The complete portfolio repository containing this assignment
-            is available below.
-        </p>
+                    </p>
 
-        <a
-            class="repo"
-            href="https://github.com/bhuvanashreekr-del/portfoilo"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            View GitHub Repository →
-        </a>
-
-    </div>
-
-</section>
+                </div>
 
 
-</main>
+                <div class="info-box">
+
+                    <h3>
+                        IFTTT
+                    </h3>
+
+                    <p>
+
+                        IFTTT is based on connecting services through
+                        event-and-action workflows.
+
+                    </p>
+
+                </div>
 
 
-<footer>
-    IFTTT + Adafruit IO · IoT Learning · Bhuvanashree K R
-</footer>
+                <div class="info-box">
+
+                    <h3>
+                        Cloud IoT Platform
+                    </h3>
+
+                    <p>
+
+                        A cloud IoT platform can provide the
+                        communication layer between a connected
+                        device and an automation workflow.
+
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Workflow
+                    </h3>
+
+                    <p>
+
+                        An IoT automation workflow can be represented
+                        as Trigger → Automation Service → Action →
+                        IoT Device.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 03 SYSTEM DESIGN ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                03 / SYSTEM DESIGN
+            </div>
+
+
+            <h2>
+                Automation Architecture
+            </h2>
+
+
+            <div class="card">
+
+
+                <div class="flow">
+
+
+                    <div class="flow-box">
+                        Trigger
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Automation Service
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        IoT Cloud Platform
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        ESP32
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Output
+                    </div>
+
+
+                </div>
+
+
+                <p>
+
+                    The architecture represents the general flow of
+                    an automated IoT operation. A trigger initiates
+                    the workflow, the automation service processes
+                    it and the resulting action reaches the connected
+                    IoT system.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 04 HARDWARE SOFTWARE ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                04 / HARDWARE & SOFTWARE
+            </div>
+
+
+            <h2>
+                Tools & Platforms
+            </h2>
+
+
+            <div class="grid">
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Hardware
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            ESP32 development board
+                        </li>
+
+                        <li>
+                            Connected output circuit
+                        </li>
+
+                        <li>
+                            Connecting wires
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Software & Services
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            Arduino IDE
+                        </li>
+
+                        <li>
+                            Adafruit IO
+                        </li>
+
+                        <li>
+                            IFTTT
+                        </li>
+
+                        <li>
+                            Web browser
+                        </li>
+
+                        <li>
+                            Wi-Fi / Internet connection
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 05 WIRING / SETUP ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                05 / WIRING / SETUP
+            </div>
+
+
+            <h2>
+                IoT Setup
+            </h2>
+
+
+            <div class="card">
+
+                <p>
+
+                    The ESP32-based output-control setup forms the
+                    device side of the IoT workflow.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    The device communicates through the network while
+                    the cloud service provides the communication path
+                    required for the automation workflow.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    The physical output is connected to the ESP32-based
+                    control system so that a command generated through
+                    the workflow can affect the output.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 06 IMPLEMENTATION ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                06 / IMPLEMENTATION
+            </div>
+
+
+            <h2>
+                Automation Process
+            </h2>
+
+
+            <div class="card">
+
+
+                <ol
+                    style="
+                        padding-left: 22px;
+                        color: #91a0ad;
+                    "
+                >
+
+                    <li>
+
+                        I first understood the difference between
+                        manual control and automated control.
+
+                    </li>
+
+
+                    <li>
+
+                        I identified the event or condition that
+                        could act as the trigger for an automated
+                        workflow.
+
+                    </li>
+
+
+                    <li>
+
+                        I studied how the trigger is passed to an
+                        automation service.
+
+                    </li>
+
+
+                    <li>
+
+                        The automation service processes the trigger
+                        and determines the corresponding action.
+
+                    </li>
+
+
+                    <li>
+
+                        The resulting action is passed through the
+                        IoT communication path.
+
+                    </li>
+
+
+                    <li>
+
+                        The ESP32 receives the resulting command and
+                        controls the connected output.
+
+                    </li>
+
+
+                    <li>
+
+                        I tested the workflow and observed whether
+                        the connected system responded correctly.
+
+                    </li>
+
+
+                </ol>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 07 CONFIGURATION ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                07 / CONFIGURATION
+            </div>
+
+
+            <h2>
+                Trigger → Action Workflow
+            </h2>
+
+
+            <div class="card">
+
+
+                <div class="flow">
+
+
+                    <div class="flow-box">
+                        Event / Trigger
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        IFTTT
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        IoT Cloud Service
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        ESP32
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Output
+                    </div>
+
+
+                </div>
+
+
+                <br>
+
+
+                <div class="warning">
+
+                    The exact IFTTT trigger and action names are not
+                    visible in the supplied evidence. Therefore this
+                    page documents the automation workflow without
+                    inventing a specific Applet configuration.
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 08 EVIDENCE ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                08 / EVIDENCE
+            </div>
+
+
+            <h2>
+                Automation & Data Evidence
+            </h2>
+
+
+            <div class="image-grid">
+
+
+                <!-- JPEG -->
+
+                <div class="image-card">
+
+
+                    <img
+                        src="firebase-logging-automation-export.jpeg"
+                        alt="Firebase logging automation and data export"
+                    >
+
+
+                    <div class="caption">
+
+                        Firebase Logging, Automation & Data Export
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PNG -->
+
+                <div class="image-card">
+
+
+                    <img
+                        src="firebase-logging-automation-export.png"
+                        alt="Firebase logging automation and data export evidence"
+                    >
+
+
+                    <div class="caption">
+
+                        Firebase Logging, Automation & Data Export — PNG Evidence
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <br>
+
+
+            <div class="card">
+
+                <p>
+
+                    These screenshots document the logging,
+                    automation and data-export stages of the IoT
+                    project.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    Additional working evidence can be added once
+                    the exact filenames of the two working screenshots
+                    are confirmed.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 09 CHALLENGES ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                09 / CHALLENGES & FIXES
+            </div>
+
+
+            <h2>
+                Problems & Solutions
+            </h2>
+
+
+            <div class="card">
+
+
+                <ul>
+
+
+                    <li>
+
+                        <strong>
+                            Understanding automation:
+                        </strong>
+
+                        I had to separate the trigger, processing
+                        stage and final action instead of treating
+                        the complete operation as one step.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Cloud communication:
+                        </strong>
+
+                        The automation workflow depends on
+                        communication between multiple services,
+                        so each stage had to be considered separately.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Testing:
+                        </strong>
+
+                        The final output had to be checked after
+                        the automated command was generated.
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 10 REFLECTION ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                10 / REFLECTION
+            </div>
+
+
+            <h2>
+                What I Learned
+            </h2>
+
+
+            <div class="card">
+
+
+                <p>
+
+                    This assignment helped me understand that IoT
+                    is not limited to directly controlling hardware
+                    from a dashboard.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    Automation can connect events and actions so
+                    that a system can respond with less manual
+                    intervention.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    I learned to think about an IoT application as
+                    a complete workflow consisting of a trigger,
+                    communication layer, processing stage and
+                    physical output.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    This concept also helped me understand the later
+                    Firebase monitoring, logging and data-export
+                    stages of the project.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 11 REPOSITORY ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                11 / REPOSITORY LINK
+            </div>
+
+
+            <h2>
+                Project Repository
+            </h2>
+
+
+            <div class="card">
+
+
+                <p>
+
+                    This assignment page is maintained as part of
+                    my IoT Learning portfolio.
+
+                </p>
+
+
+                <a
+                    class="repo"
+                    href="https://github.com/bhuvanashreekr-del/portfoilo/blob/master/ifttt-automation.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    View Assignment on GitHub →
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        IoT Learning • IoT Automation • Bhuvanashree K R
+
+    </footer>
 
 
 </body>
+
 </html>

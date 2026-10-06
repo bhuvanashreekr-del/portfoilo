@@ -5,12 +5,17 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Firebase IoT Dashboard | IoT Learning</title>
+    <title>Firebase IoT Monitoring Dashboard | IoT Learning</title>
 
-    <link rel="stylesheet" href="iot.css">
+    <link
+        rel="stylesheet"
+        href="iot.css"
+    >
 
 </head>
 
@@ -18,537 +23,1062 @@
 <body>
 
 
-<nav class="navbar">
+    <!-- ================= NAVIGATION ================= -->
 
-    <div class="nav-container">
+    <nav class="navbar">
 
-        <div class="logo">
-            Bhuvanashree_KR
-        </div>
+        <div class="nav-container">
 
-        <div class="nav-links">
 
-            <a href="index.html">Home</a>
-
-            <a href="about.html">About</a>
-
-            <a href="skills.html">Skills</a>
-
-            <a href="experience.html">Experience</a>
-
-            <a href="protosem.html">ProtoSem</a>
-
-            <a href="iot.html" class="active">
-                IoT Learning
-            </a>
-
-            <a href="contact.html">Contact</a>
-
-        </div>
-
-    </div>
-
-</nav>
-
-
-<header class="hero">
-
-    <span class="tag">
-        TASK 04 · IoT LEARNING
-    </span>
-
-    <h1>
-        Firebase IoT <span>Monitoring Dashboard</span>
-    </h1>
-
-    <p>
-        Understanding cloud-based web applications using Firebase,
-        authentication, protected dashboards and IoT-oriented
-        monitoring concepts.
-    </p>
-
-</header>
-
-
-<main class="container">
-
-
-<section class="section">
-
-    <div class="section-number">01</div>
-
-    <h2>Overview</h2>
-
-    <div class="card">
-
-        <p>
-            During Week 7, I worked on a Firebase web application.
-            The work included creating a responsive landing page,
-            implementing Firebase Email/Password Authentication and
-            developing a protected dashboard.
-        </p>
-
-        <p>
-            I also worked with authentication-state handling,
-            logout functionality and Firebase Hosting CLI as part
-            of the web application workflow.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section class="section">
-
-    <div class="section-number">02</div>
-
-    <h2>Concepts</h2>
-
-    <div class="grid">
-
-
-        <div class="info-box">
-
-            <h3>Cloud Computing</h3>
-
-            <p>
-                Cloud computing provides services and resources through
-                network-connected infrastructure.
-            </p>
-
-        </div>
-
-
-        <div class="info-box">
-
-            <h3>Firebase</h3>
-
-            <p>
-                Firebase provides cloud services that can be integrated
-                into web and application development.
-            </p>
-
-        </div>
-
-
-        <div class="info-box">
-
-            <h3>Authentication</h3>
-
-            <p>
-                Authentication verifies the identity of a user
-                attempting to access an application.
-            </p>
-
-        </div>
-
-
-        <div class="info-box">
-
-            <h3>Authorization</h3>
-
-            <p>
-                Authorization determines what an authenticated user
-                is allowed to access or perform.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<section class="section">
-
-    <div class="section-number">03</div>
-
-    <h2>System Design</h2>
-
-    <div class="card">
-
-        <div class="flow">
-
-            <div class="flow-box">
-                User
+            <div class="logo">
+                Bhuvanashree.KR
             </div>
 
-            <div class="arrow">→</div>
 
-            <div class="flow-box">
-                Login
-            </div>
+            <div class="nav-links">
 
-            <div class="arrow">→</div>
+                <a href="index.html">
+                    Home
+                </a>
 
-            <div class="flow-box">
-                Firebase Authentication
-            </div>
+                <a href="about.html">
+                    About
+                </a>
 
-            <div class="arrow">→</div>
+                <a href="skills.html">
+                    Skills
+                </a>
 
-            <div class="flow-box">
-                Protected Dashboard
+                <a href="experience.html">
+                    Experience
+                </a>
+
+                <a href="protosem.html">
+                    ProtoSem
+                </a>
+
+                <a
+                    href="iot.html"
+                    class="active"
+                >
+                    IoT Learning
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
             </div>
 
         </div>
 
-    </div>
-
-</section>
+    </nav>
 
 
-<section class="section">
 
-    <div class="section-number">04</div>
+    <!-- ================= HERO ================= -->
 
-    <h2>Hardware & Software</h2>
+    <header class="hero">
 
-    <div class="grid">
-
-
-        <div class="info-box">
-
-            <h3>Software</h3>
-
-            <ul>
-
-                <li>Firebase</li>
-
-                <li>HTML</li>
-
-                <li>CSS</li>
-
-                <li>JavaScript</li>
-
-                <li>Firebase Authentication</li>
-
-                <li>Firebase Hosting CLI</li>
-
-            </ul>
-
-        </div>
+        <span class="tag">
+            IoT Learning • Assignment 04
+        </span>
 
 
-        <div class="info-box">
+        <h1>
+            Firebase <span>IoT Monitoring Dashboard</span>
+        </h1>
 
-            <h3>IoT Context</h3>
-
-            <p>
-                The documented Week 7 work establishes the Firebase
-                web application and ESP32/IoT activities. Specific
-                sensor hardware for this Firebase page is not
-                established in the available evidence.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<section class="section">
-
-    <div class="section-number">05</div>
-
-    <h2>Wiring / Setup</h2>
-
-    <div class="card">
 
         <p>
-            The documented Firebase work focused mainly on the web
-            application, authentication and cloud-side workflow.
-            A specific sensor wiring configuration is not included
-            in the available Week 7 record.
+
+            Development of a Firebase-connected web dashboard
+            for IoT monitoring, authentication and control.
+
         </p>
 
-    </div>
+    </header>
 
-</section>
 
 
-<section class="section">
+    <main class="container">
 
-    <div class="section-number">06</div>
 
-    <h2>Implementation Process</h2>
+        <!-- ================= 01 OVERVIEW ================= -->
 
+        <section class="section">
 
-    <div class="card">
-
-        <h3>Step 1 — Understanding the Requirement</h3>
-
-        <p>
-            I first understood how Firebase could be used as a cloud
-            platform for a web application and how authentication
-            could be used to control access to the application.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 2 — Creating the Web Application</h3>
-
-        <p>
-            I started by creating the responsive landing page and
-            developing the HTML, CSS and JavaScript structure required
-            for the application.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 3 — Configuring Firebase</h3>
-
-        <p>
-            I connected the web application with Firebase and prepared
-            the required Firebase services for the project.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 4 — Implementing Authentication</h3>
-
-        <p>
-            I configured Firebase Email/Password Authentication so that
-            users could sign in to the application using their credentials.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 5 — Creating the Login Flow</h3>
-
-        <p>
-            I created the login interface and connected it with Firebase
-            Authentication. I then tested the authentication process
-            using the available login credentials.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 6 — Protecting the Dashboard</h3>
-
-        <p>
-            I used authentication-state handling to determine whether
-            the user was authenticated. Based on the authentication
-            state, access to the dashboard was controlled.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 7 — Implementing Logout</h3>
-
-        <p>
-            I added logout functionality so that an authenticated user
-            could sign out and leave the protected dashboard.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 8 — Testing</h3>
-
-        <p>
-            I tested the complete flow by checking the landing page,
-            login process, authentication state, dashboard access and
-            logout functionality.
-        </p>
-
-    </div>
-
-
-    <div class="card">
-
-        <h3>Step 9 — Hosting</h3>
-
-        <p>
-            I also worked with the Firebase Hosting CLI as part of
-            the deployment workflow for the web application.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section class="section">
-
-    <div class="section-number">07</div>
-
-    <h2>Configuration</h2>
-
-    <div class="card">
-
-        <ul>
-
-            <li>Firebase project configured.</li>
-
-            <li>Email/Password Authentication configured.</li>
-
-            <li>Landing page created.</li>
-
-            <li>Protected dashboard created.</li>
-
-            <li>Authentication state handled.</li>
-
-            <li>Logout functionality implemented.</li>
-
-            <li>Firebase Hosting workflow used.</li>
-
-        </ul>
-
-    </div>
-
-</section>
-
-
-<section class="section">
-
-    <div class="section-number">08</div>
-
-    <h2>Evidence</h2>
-
-    <div class="image-grid">
-
-
-        <div class="image-card">
-
-            <img
-                src="images/protosim/week7/firebase-landing-page.jpg"
-                alt="Firebase Landing Page"
-            >
-
-            <div class="caption">
-                Firebase web application landing page.
+            <div class="section-number">
+                01 / OVERVIEW
             </div>
 
-        </div>
+
+            <h2>
+                Project Overview
+            </h2>
 
 
-        <div class="image-card">
+            <div class="card">
 
-            <img
-                src="images/protosim/week7/firebase-authentication.jpg"
-                alt="Firebase Authentication"
-            >
 
-            <div class="caption">
-                Firebase authentication workflow.
+                <p>
+
+                    The objective of this assignment was to understand
+                    how Firebase can be used as a cloud platform for
+                    an IoT monitoring and control application.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    I developed a web-based IoT application with a
+                    login interface and a protected dashboard. The
+                    dashboard was designed to display IoT information
+                    and provide control functions for the connected
+                    system.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    Firebase Authentication was used for user
+                    authentication, while Firebase services were
+                    used as the cloud layer connecting the web
+                    application and IoT system.
+
+                </p>
+
+
             </div>
 
-        </div>
+        </section>
 
 
-    </div>
 
-</section>
+        <!-- ================= 02 CONCEPTS ================= -->
 
+        <section class="section">
 
-<section class="section">
-
-    <div class="section-number">09</div>
-
-    <h2>Challenges & Fixes</h2>
-
-    <div class="card">
-
-        <p>
-            I tested the application by checking each part of the
-            authentication flow separately, including the login page,
-            authentication state, dashboard access and logout.
-        </p>
-
-        <p>
-            The available Week 7 record does not contain the exact
-            individual error messages, so unsupported debugging details
-            have not been added.
-        </p>
-
-    </div>
-
-</section>
+            <div class="section-number">
+                02 / CONCEPTS
+            </div>
 
 
-<section class="section">
-
-    <div class="section-number">10</div>
-
-    <h2>Reflection</h2>
-
-    <div class="card">
-
-        <p>
-            This work helped me understand how authentication can be
-            integrated into a web application and how a protected
-            dashboard can be structured using Firebase services.
-        </p>
-
-        <p>
-            I also gained practical experience connecting frontend
-            development with a cloud platform.
-        </p>
-
-    </div>
-
-</section>
+            <h2>
+                Cloud & Firebase Concepts
+            </h2>
 
 
-<section class="section">
-
-    <div class="section-number">11</div>
-
-    <h2>Repository Link</h2>
-
-    <div class="card">
-
-        <p>
-            The complete portfolio repository containing this
-            assignment is available below.
-        </p>
-
-        <a
-            class="repo"
-            href="https://github.com/bhuvanashreekr-del/portfoilo"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            View GitHub Repository →
-        </a>
-
-    </div>
-
-</section>
+            <div class="grid">
 
 
-</main>
+                <div class="info-box">
+
+                    <h3>
+                        Cloud Computing
+                    </h3>
+
+                    <p>
+
+                        Cloud computing allows applications and
+                        data to be accessed through Internet-based
+                        services rather than relying only on local
+                        resources.
+
+                    </p>
+
+                </div>
 
 
-<footer>
-    Firebase IoT Dashboard · IoT Learning · Bhuvanashree K R
-</footer>
+                <div class="info-box">
+
+                    <h3>
+                        BaaS
+                    </h3>
+
+                    <p>
+
+                        Backend as a Service provides ready-to-use
+                        backend capabilities such as authentication
+                        and databases for application development.
+
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Firebase
+                    </h3>
+
+                    <p>
+
+                        Firebase provides cloud services that can
+                        be used to build web and IoT-related
+                        applications.
+
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Authentication
+                    </h3>
+
+                    <p>
+
+                        Authentication verifies the identity of
+                        a user before allowing access to protected
+                        application features.
+
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Authorization
+                    </h3>
+
+                    <p>
+
+                        Authorization determines what an
+                        authenticated user is allowed to access
+                        or perform.
+
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Realtime Database
+                    </h3>
+
+                    <p>
+
+                        Firebase Realtime Database provides a
+                        cloud-based data storage mechanism that
+                        can be used by connected applications.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 03 SYSTEM DESIGN ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                03 / SYSTEM DESIGN
+            </div>
+
+
+            <h2>
+                Firebase IoT Architecture
+            </h2>
+
+
+            <div class="card">
+
+
+                <div class="flow">
+
+
+                    <div class="flow-box">
+                        IoT Device
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Internet
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Firebase
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Web Dashboard
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        User
+                    </div>
+
+
+                </div>
+
+
+                <p>
+
+                    The IoT device communicates with the cloud layer,
+                    while the web application uses Firebase services
+                    to access the required information and provide
+                    the dashboard interface.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 04 HARDWARE SOFTWARE ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                04 / HARDWARE & SOFTWARE
+            </div>
+
+
+            <h2>
+                Tools Used
+            </h2>
+
+
+            <div class="grid">
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Hardware
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            ESP32 development board
+                        </li>
+
+                        <li>
+                            IoT output / control hardware
+                        </li>
+
+                        <li>
+                            Sensor-based IoT setup
+                        </li>
+
+                        <li>
+                            Connecting wires
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Software & Platforms
+                    </h3>
+
+
+                    <ul>
+
+                        <li>
+                            Arduino IDE
+                        </li>
+
+                        <li>
+                            Visual Studio Code
+                        </li>
+
+                        <li>
+                            HTML
+                        </li>
+
+                        <li>
+                            CSS
+                        </li>
+
+                        <li>
+                            JavaScript
+                        </li>
+
+                        <li>
+                            Firebase
+                        </li>
+
+                        <li>
+                            Web browser
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 05 WIRING / SETUP ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                05 / WIRING / SETUP
+            </div>
+
+
+            <h2>
+                IoT & Firebase Setup
+            </h2>
+
+
+            <div class="card">
+
+
+                <ol
+                    style="
+                        padding-left: 22px;
+                        color: #91a0ad;
+                    "
+                >
+
+                    <li>
+
+                        I prepared the ESP32-based IoT setup and
+                        checked the required hardware connections.
+
+                    </li>
+
+
+                    <li>
+
+                        I created the Firebase project that would
+                        act as the cloud backend for the application.
+
+                    </li>
+
+
+                    <li>
+
+                        I configured the required Firebase services
+                        for the web application.
+
+                    </li>
+
+
+                    <li>
+
+                        I prepared the web application using
+                        Visual Studio Code.
+
+                    </li>
+
+
+                    <li>
+
+                        I connected the web application with Firebase.
+
+                    </li>
+
+
+                    <li>
+
+                        I created the authentication and dashboard
+                        workflow.
+
+                    </li>
+
+
+                </ol>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 06 IMPLEMENTATION ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                06 / IMPLEMENTATION
+            </div>
+
+
+            <h2>
+                Web Application Development
+            </h2>
+
+
+            <div class="card">
+
+
+                <ol
+                    style="
+                        padding-left: 22px;
+                        color: #91a0ad;
+                    "
+                >
+
+                    <li>
+
+                        I created the web application structure using
+                        HTML, CSS and JavaScript.
+
+                    </li>
+
+
+                    <li>
+
+                        I designed the initial landing and login
+                        interface.
+
+                    </li>
+
+
+                    <li>
+
+                        I configured Firebase Email/Password
+                        Authentication for user login.
+
+                    </li>
+
+
+                    <li>
+
+                        I used authentication-state handling so that
+                        the dashboard could be protected from
+                        unauthenticated access.
+
+                    </li>
+
+
+                    <li>
+
+                        I created the dashboard interface for displaying
+                        IoT information and control options.
+
+                    </li>
+
+
+                    <li>
+
+                        I added logout functionality so that the user
+                        could leave the authenticated dashboard.
+
+                    </li>
+
+
+                    <li>
+
+                        I connected the application to Firebase
+                        cloud services.
+
+                    </li>
+
+
+                    <li>
+
+                        I tested the application through the browser.
+
+                    </li>
+
+
+                </ol>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 07 CONFIGURATION ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                07 / CONFIGURATION
+            </div>
+
+
+            <h2>
+                Authentication & Dashboard Flow
+            </h2>
+
+
+            <div class="card">
+
+
+                <div class="flow">
+
+
+                    <div class="flow-box">
+                        User
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Login Page
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Firebase Authentication
+                    </div>
+
+
+                    <div class="arrow">
+                        →
+                    </div>
+
+
+                    <div class="flow-box">
+                        Protected Dashboard
+                    </div>
+
+
+                </div>
+
+
+                <br>
+
+
+                <p>
+
+                    The application first verifies the user's
+                    authentication status. After successful
+                    authentication, the dashboard becomes available
+                    for IoT monitoring and control.
+
+                </p>
+
+
+                <br>
+
+
+                <div class="warning">
+
+                    The dashboard is deployed as a Firebase-hosted
+                    web application.
+
+                </div>
+
+
+                <a
+                    class="repo"
+                    href="https://iot-nexus-47e28.web.app/dashboard.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    Open Live Firebase Dashboard →
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 08 EVIDENCE ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                08 / EVIDENCE
+            </div>
+
+
+            <h2>
+                Development & Dashboard Evidence
+            </h2>
+
+
+            <div class="image-grid">
+
+
+                <!-- FIREBASE SETUP -->
+
+                <div class="image-card">
+
+
+                    <img
+                        src="firebase-setup-deployment.png"
+                        alt="Firebase setup and deployment"
+                    >
+
+
+                    <div class="caption">
+
+                        Firebase Setup / Deployment
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- VS CODE -->
+
+                <div class="image-card">
+
+
+                    <img
+                        src="firebase-vscode-webapp.png"
+                        alt="Firebase web application in Visual Studio Code"
+                    >
+
+
+                    <div class="caption">
+
+                        Web Application Development in Visual Studio Code
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- IOT FIREBASE SETUP -->
+
+                <div class="image-card">
+
+
+                    <img
+                        src="iot-firebase-setup.png"
+                        alt="IoT Firebase setup"
+                    >
+
+
+                    <div class="caption">
+
+                        IoT Firebase Setup
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- IOT MONITORING -->
+
+                <div class="image-card">
+
+
+                    <img
+                        src="iot-monitoring.png"
+                        alt="IoT monitoring dashboard"
+                    >
+
+
+                    <div class="caption">
+
+                        IoT Monitoring Dashboard
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+            <br>
+
+
+            <div class="card">
+
+                <p>
+
+                    These images document the Firebase setup,
+                    web-application development, IoT Firebase
+                    configuration and monitoring-dashboard stages
+                    of the project.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 09 CHALLENGES ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                09 / CHALLENGES & FIXES
+            </div>
+
+
+            <h2>
+                Problems & Solutions
+            </h2>
+
+
+            <div class="card">
+
+
+                <ul>
+
+
+                    <li>
+
+                        <strong>
+                            Firebase configuration:
+                        </strong>
+
+                        The web application had to be correctly
+                        connected to the Firebase project before
+                        cloud features could be tested.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Authentication:
+                        </strong>
+
+                        The login state had to be checked before
+                        displaying the protected dashboard.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Frontend and backend connection:
+                        </strong>
+
+                        The web interface and Firebase services
+                        had to communicate correctly for the
+                        dashboard workflow to operate.
+
+                    </li>
+
+
+                    <li>
+
+                        <strong>
+                            Deployment:
+                        </strong>
+
+                        The web application was deployed so that
+                        the dashboard could be accessed through
+                        a live URL.
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 10 REFLECTION ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                10 / REFLECTION
+            </div>
+
+
+            <h2>
+                What I Learned
+            </h2>
+
+
+            <div class="card">
+
+
+                <p>
+
+                    This assignment helped me understand how an IoT
+                    project can be extended from hardware control
+                    into a complete cloud-connected web application.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    I learned how authentication can be used to
+                    protect a dashboard and how Firebase can provide
+                    backend services for a web application.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    I also gained practical experience using Visual
+                    Studio Code to develop a web application and
+                    deploying it through Firebase Hosting.
+
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= 11 REPOSITORY ================= -->
+
+        <section class="section">
+
+            <div class="section-number">
+                11 / REPOSITORY LINK
+            </div>
+
+
+            <h2>
+                Project Repository
+            </h2>
+
+
+            <div class="card">
+
+
+                <p>
+
+                    This assignment page is maintained as part of
+                    my IoT Learning portfolio.
+
+                </p>
+
+
+                <a
+                    class="repo"
+                    href="https://github.com/bhuvanashreekr-del/portfoilo/blob/master/firebase-dashboard.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    View Assignment on GitHub →
+
+                </a>
+
+
+                <br>
+                <br>
+
+
+                <a
+                    class="repo"
+                    href="https://iot-nexus-47e28.web.app/dashboard.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    Open Live Firebase Dashboard →
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        IoT Learning • Firebase IoT Monitoring • Bhuvanashree K R
+
+    </footer>
 
 
 </body>
+
 </html>
