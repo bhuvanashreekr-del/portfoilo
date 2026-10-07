@@ -20,7 +20,7 @@
 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght\@500;600;700&family=Inter:wght\@400;500;600&family=JetBrains+Mono:wght\@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 
@@ -29,197 +29,114 @@
 <style>
 
 .week-tabs-wrapper {
-
   position: sticky;
-
   top: 70px;
-
   z-index: 10;
-
   background: rgba(13, 17, 23, 0.95);
-
   backdrop-filter: blur(12px);
-
   padding: 14px 0;
-
   margin-bottom: 24px;
-
   border-bottom: 1px solid var(--surface-border, #30363d);
-
 }
 
 .week-tabs {
-
   display: flex;
-
   gap: 8px;
-
   overflow-x: auto;
-
   padding-bottom: 6px;
-
   scrollbar-width: thin;
-
 }
 
 .tab-btn {
-
   background: var(--bg-raised, #161b22);
-
   color: var(--text-muted, #8b949e);
-
   border: 1px solid var(--surface-border, #30363d);
-
   padding: 8px 16px;
-
   border-radius: 20px;
-
   font-family: 'JetBrains Mono', monospace;
-
   font-size: 13px;
-
   cursor: pointer;
-
   white-space: nowrap;
-
   transition: all 0.2s ease;
-
 }
 
 .tab-btn.active {
-
   background: var(--trace, #3fb950);
-
   color: #0d1117;
-
   font-weight: 700;
-
   border-color: var(--trace, #3fb950);
-
 }
 
 .week-panel {
-
   display: none;
-
 }
 
 .week-panel.active {
-
   display: block;
-
 }
 
 .image-gallery {
-
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-
   gap: 16px;
-
   margin: 20px 0;
-
 }
 
 .image-card {
-
   background: var(--bg-raised, #161b22);
-
   border: 1px solid var(--surface-border, #30363d);
-
   border-radius: 8px;
-
   padding: 10px;
-
 }
 
 .image-card img {
-
   width: 100%;
-
   height: 190px;
-
   object-fit: cover;
-
   border-radius: 6px;
-
   background: #21262d;
-
 }
 
 .image-card .caption {
-
   font-size: 12px;
-
   color: var(--text-muted, #8b949e);
-
   margin-top: 8px;
-
   font-family: 'JetBrains Mono', monospace;
-
 }
 
 .activity-block {
-
   background: rgba(22, 27, 34, 0.6);
-
   border: 1px solid var(--surface-border, #30363d);
-
   border-radius: 8px;
-
   padding: 20px;
-
   margin: 16px 0;
-
 }
 
 .activity-block h4 {
-
   color: var(--trace, #3fb950);
-
   margin-top: 0;
-
   margin-bottom: 8px;
-
 }
 
 .app-link-btn {
-
   display: inline-flex;
-
   align-items: center;
-
   gap: 8px;
-
   background: var(--bg-raised, #161b22);
-
   color: var(--trace, #3fb950);
-
   border: 1px solid var(--trace, #3fb950);
-
   padding: 10px 18px;
-
   border-radius: 6px;
-
   font-family: 'JetBrains Mono', monospace;
-
   font-size: 13px;
-
   text-decoration: none;
-
   margin-top: 12px;
-
   transition: all 0.2s ease;
-
 }
 
 .app-link-btn:hover {
-
   background: var(--trace, #3fb950);
-
   color: #0d1117;
-
 }
 
 </style>
@@ -292,59 +209,34 @@
 
   <div class="container">
 
-    <!-- WEEK TABS NAVIGATION -->
-
     <div class="week-tabs-wrapper">
 
       <div class="week-tabs" id="weekTabs">
 
         <button class="tab-btn active" data-target="week0">Week 0</button>
-
         <button class="tab-btn" data-target="week1">Week 1</button>
-
         <button class="tab-btn" data-target="week2">Week 2</button>
-
         <button class="tab-btn" data-target="week3">Week 3</button>
-
         <button class="tab-btn" data-target="week4">Week 4</button>
-
         <button class="tab-btn" data-target="week5">Week 5</button>
-
         <button class="tab-btn" data-target="week6">Week 6</button>
-
         <button class="tab-btn" data-target="week7">Week 7</button>
-
         <button class="tab-btn" data-target="week8">Week 8</button>
-
         <button class="tab-btn" data-target="week9">Week 9</button>
-
         <button class="tab-btn" data-target="week10">Week 10</button>
-
         <button class="tab-btn" data-target="week11">Week 11</button>
-
         <button class="tab-btn" data-target="week12">Week 12</button>
-
         <button class="tab-btn" data-target="week13">Week 13</button>
-
         <button class="tab-btn" data-target="week14">Week 14</button>
-
         <button class="tab-btn" data-target="week15">Week 15</button>
-
         <button class="tab-btn" data-target="week16">Week 16</button>
-
         <button class="tab-btn" data-target="week17">Week 17</button>
-
         <button class="tab-btn" data-target="week18">Week 18</button>
-
         <button class="tab-btn" data-target="week19">Week 19</button>
-
         <button class="tab-btn" data-target="week20">Week 20</button>
 
       </div>
-
     </div>
-
-    <!-- WEEK PANELS CONTENT -->
 
     <div id="weekPanels">
 
@@ -363,9 +255,7 @@
           </div>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-
             Kicked off ProtoSem onboarding at Forge, KCT Tech Park with team challenges, personality assessments, and historical technology research:
-
           </p>
 
           <ul style="color:var(--text-muted); padding-left:20px; margin-bottom:14px; display:flex; flex-direction:column; gap:6px;">
@@ -379,35 +269,24 @@
           </ul>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-
             We also completed the official 16Personalities assessment, where my result came out as <strong>Commander (ENTJ)</strong> &mdash; reflecting a structured, strategic, and goal-oriented approach to leadership and problem-solving.
-
           </p>
 
           <div class="image-gallery">
 
             <div class="image-card">
-
-              <img src="week0-chair.jpeg" alt="Chair Game Icebreaker Photo" onerror="this.src='http&#x73;*:*//via.placeholder.com/400x200/161b22/8b949e?text=Chair+Game+Photo'">
-
+              <img src="week0-chair.jpeg" alt="Chair Game Icebreaker Photo">
               <div class="caption">// Photo 01: Chair Game Icebreaker</div>
-
             </div>
 
             <div class="image-card">
-
-              <img src="week0-marshmallow.jpg" alt="Marshmallow Challenge Photo" onerror="this.src='http&#x73;*:*//via.placeholder.com/400x200/161b22/8b949e?text=Marshmallow+Challenge+Photo'">
-
+              <img src="week0-marshmallow.jpg" alt="Marshmallow Challenge Photo">
               <div class="caption">// Photo 02: Marshmallow Challenge (Beta Team)</div>
-
             </div>
 
             <div class="image-card">
-
-              <img src="week0-personality.jpg" alt="16Personalities Commander Result" onerror="this.src='http&#x73;*:*//via.placeholder.com/400x200/161b22/8b949e?text=Commander+ENTJ+Result'">
-
+              <img src="week0-personality.jpg" alt="16Personalities Commander Result">
               <div class="caption">// Photo 03: 16Personalities &mdash; Commander</div>
-
             </div>
 
           </div>
@@ -443,27 +322,19 @@
           </div>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-
             In Week 1, explored <strong>Zen Pencils</strong> comics to select an illustration matching my personal values and story. Midway through the week, worked with the <strong>electronics team</strong> applying the 5S methodology (Sort, Set in order, Shine, Standardize, Sustain) to clean the workspace, organize tools, and sort various Integrated Circuits (ICs).
-
           </p>
 
           <div class="image-gallery">
 
             <div class="image-card">
-
-              <img src="week1-zen-pencils.jpg" alt="Zen Pencils Comic Selection Photo" onerror="this.src='http&#x73;*:*//via.placeholder.com/400x200/161b22/8b949e?text=Zen+Pencils+Comic+Photo'">
-
+              <img src="week1-zen-pencils.jpg" alt="Zen Pencils Comic Selection Photo">
               <div class="caption">// Photo 01: Zen Pencils Comic Selection</div>
-
             </div>
 
             <div class="image-card">
-
-              <img src="week1-5s.jpeg" alt="Electronics Team 5S Photo" onerror="this.src='http&#x73;*:*//via.placeholder.com/400x200/161b22/8b949e?text=5S+Electronics+Workbench'">
-
+              <img src="week1-5s.jpeg" alt="Electronics Team 5S Photo">
               <div class="caption">// Photo 02: Electronics Team 5S &amp; IC Sorting</div>
-
             </div>
 
           </div>
@@ -497,9 +368,7 @@
           </div>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-
             Week 2 focused on foundational computing concepts, algorithmic logic, and computational problem-solving. We started with real-world step-by-step logic exercises (such as analyzing the algorithm for <em>how to make a dosa</em>) and watched the <strong>"Think Like a Coder"</strong> series to analyze complex problem formulations. We then transitioned into programming paradigms using visual block logic in <strong>Scratch</strong>, text-based scripting in <strong>Python</strong>, and rapid mobile app prototyping in <strong>MIT App Inventor</strong>.
-
           </p>
 
           <div style="background:rgba(22, 27, 34, 0.6); border:1px solid var(--surface-border); border-radius:8px; padding:20px; margin:16px 0;">
@@ -507,15 +376,11 @@
             <h4 style="color:var(--trace); margin-top:0;">Project Highlight: Care Coordinator App (MIT App Inventor)</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-
               <strong>The Problem:</strong> When an elderly patient is discharged from the hospital, managing recovery &mdash; tracking medications, remembering follow-up appointments, and watching for warning signs &mdash; usually falls on family members who are often not physically present, medically trained, or given a structured way to stay organized. Paperwork and verbal instructions lead to missed medications, missed appointments, delayed responses, and caregiver anxiety.
-
             </p>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               <strong>The Solution:</strong> <em>Care Coordinator</em> centralizes a patient's post-discharge care plan in an accessible mobile interface. It sends timely reminders for medications and appointments, and provides a direct communication channel to a care coordinator &mdash; offering family members a single, reliable point of reference during post-hospital recovery.
-
             </p>
 
           </div>
@@ -525,15 +390,11 @@
             <h4 style="color:var(--trace); margin-top:0;">Innovation 101: Applied Design Thinking &amp; FIH Framework</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-
               Participated in an Innovation 101 session on <strong>Applied Design Thinking</strong>. We introduced the <strong>Forge Innovation Handbook (FIH)</strong> to analyze product innovation hypotheses across 5 core pillars: Problem, Constraints &amp; Barriers, Value &amp; Benefits, Solution &amp; Usability, and Price &amp; Target Economics.
-
             </p>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Using the FIH tool, we collaborated with the Beta Team to evaluate product hypotheses and studied design thinking case studies including the IDEO Shopping Cart, Airbnb/RedBus founding stories, and a gamified stroke rehab glove prototype.
-
             </p>
 
           </div>
@@ -541,51 +402,33 @@
           <div class="image-gallery">
 
             <div class="image-card">
-
-              <img src="week2-dosa-algorithm.jpeg" alt="Dosa Preparation Algorithm Flowchart Photo" onerror="this.src='http&#x73;*:*//via.placeholder.com/400x200/161b22/8b949e?text=Dosa+Algorithm+Photo'">
-
+              <img src="week2-dosa-algorithm.jpeg" alt="Dosa Preparation Algorithm Flowchart Photo">
               <div class="caption">// Photo 01: Dosa Algorithm Step-by-Step Flow</div>
-
             </div>
 
             <div class="image-card">
-
-              <img src="week2-scratch.jpeg" alt="Scratch Programming Visual Logic Photo" onerror="this.src='http&#x73;*:*//via.placeholder.com/400x200/161b22/8b949e?text=Scratch+Visual+Logic+Photo'">
-
+              <img src="week2-scratch.jpeg" alt="Scratch Programming Visual Logic Photo">
               <div class="caption">// Photo 02: Scratch Visual Block Logic</div>
-
             </div>
 
             <div class="image-card">
-
-              <img src="week2-python.jpeg" alt="Python Scripting & Data Structures Photo" onerror="this.src='http&#x73;*:*//via.placeholder.com/400x200/161b22/8b949e?text=Python+Scripting+Photo'">
-
+              <img src="week2-python.jpeg" alt="Python Scripting & Data Structures Photo">
               <div class="caption">// Photo 03: Python Scripting &amp; Data Structures</div>
-
             </div>
 
             <div class="image-card">
-
-              <img src="week2-think-like-coder.jpeg" alt="Think Like a Coder Problem Solving Photo" onerror="this.src='http&#x73;*:*//via.placeholder.com/400x200/161b22/8b949e?text=Think+Like+a+Coder+Photo'">
-
+              <img src="week2-think-like-coder.jpeg" alt="Think Like a Coder Problem Solving Photo">
               <div class="caption">// Photo 04: "Think Like a Coder" Problem Formulation</div>
-
             </div>
 
             <div class="image-card">
-
-              <img src="week2-care-coordinator-app.jpeg" alt="Care Coordinator Mobile App Prototype Photo" onerror="this.src='http&#x73;*:*//via.placeholder.com/400x200/161b22/8b949e?text=Care+Coordinator+App+Photo'">
-
+              <img src="week2-care-coordinator-app.jpeg" alt="Care Coordinator Mobile App Prototype Photo">
               <div class="caption">// Photo 05: Care Coordinator Mobile App Prototype</div>
-
             </div>
 
             <div class="image-card">
-
-              <img src="week2-design-thinking.jpg" alt="Applied Design Thinking & FIH Workshop Photo" onerror="this.src='http&#x73;*:*//via.placeholder.com/400x200/161b22/8b949e?text=Applied+Design+Thinking+Photo'">
-
+              <img src="week2-design-thinking.jpg" alt="Applied Design Thinking & FIH Workshop Photo">
               <div class="caption">// Photo 06: Innovation 101 &amp; FIH Framework Session</div>
-
             </div>
 
           </div>
@@ -623,9 +466,7 @@
           </div>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-
             Week 3 bridged hands-on electrical engineering component testing with 3D CAD modeling and rapid physical prototyping:
-
           </p>
 
           <div style="background:rgba(22, 27, 34, 0.6); border:1px solid var(--surface-border); border-radius:8px; padding:20px; margin:16px 0;">
@@ -633,21 +474,15 @@
             <h4 style="color:var(--trace); margin-top:0;">Early Week: Electronics Fundamentals, Multimeters &amp; Capacitor Teardown</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-
               Attended a dedicated session on electronics fundamentals. Working in a specialized team, we tested active and passive components including <strong>Diodes</strong> and <strong>Resistors</strong>, and mastered continuity, voltage, and current measurements using a <strong>Multimeter</strong>.
-
             </p>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-
               <strong>Capacitor Teardown:</strong> We disassembled and busted open a capacitor to inspect its internal construction &mdash; examining the aluminum foil layers, electrolyte solution, and dielectric separator to understand physical charge storage mechanisms.
-
             </p>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Explored electrical engineering power systems: <strong>Generation, High-Voltage Transmission, Local Distribution, and Grid Infrastructure</strong>, connecting component physics to macroscopic power grids.
-
             </p>
 
           </div>
@@ -657,9 +492,7 @@
             <h4 style="color:var(--trace); margin-top:0;">Mid to End Week: Clay Prototyping, Autodesk Fusion 360 &amp; Paper Rocket CAD</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-
               Starting Wednesday, transitioned into 3D CAD modeling using <strong>Autodesk Fusion 360</strong>:
-
             </p>
 
             <ul style="color:var(--text-muted); padding-left:20px; margin-bottom:10px; display:flex; flex-direction:column; gap:6px;">
@@ -675,51 +508,33 @@
           <div class="image-gallery">
 
             <div class="image-card">
-
               <img src="week3-electronics-basics.jpg" alt="Electronics Basics Diodes Resistors Multimeter Photo">
-
               <div class="caption">// Photo 01: Electronics Basics (Diodes, Resistors &amp; Multimeter)</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week3-capacitor-busted.jpg" alt="Capacitor Teardown Internal Structure Photo">
-
               <div class="caption">// Photo 02: Capacitor Internal Construction Teardown</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week3-clay-f1.jpeg" alt="F1 Car Physical Clay Model Photo">
-
               <div class="caption">// Photo 03: Physical Engineering Clay Modeling (F1 Car)</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week3-fusion-f1.jpeg" alt="F1 Car Autodesk Fusion 360 3D CAD Photo">
-
               <div class="caption">// Photo 04: F1 Car 3D CAD Design (Autodesk Fusion 360)</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week3-paper-rocket.jpeg" alt="Paper Rocket Launch Activity Photo">
-
               <div class="caption">// Photo 05: Paper Rocket Building &amp; Flight Activity</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week3-fusion-activity2.png" alt="Autodesk Fusion 360 CAD Session 2 Photo">
-
               <div class="caption">// Photo 06: Autodesk Fusion 360 3D CAD Modeling Session 2</div>
-
             </div>
 
           </div>
@@ -757,9 +572,7 @@
           </div>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-
             Week 4 integrated digital 3D product design, physical fabrication, team formation, and critical public discussion:
-
           </p>
 
           <div class="activity-block">
@@ -767,9 +580,7 @@
             <h4>Activity 1 &mdash; CAD / Fusion 360 Water Bottle Model</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Worked with Autodesk Fusion 360 to design a detailed 3D model of a water bottle. Understood basic 3D modeling techniques, product geometry modeling, and the end-to-end workflow from digital design to 3D printing preparation.
-
             </p>
 
           </div>
@@ -779,9 +590,7 @@
             <h4>Activity 2 &mdash; 3D Printing Activity</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Explored the physical additive manufacturing process in a separate session by 3D printing the water bottle model created in Fusion 360, learning layer-by-layer fabrication principles and slicer settings.
-
             </p>
 
           </div>
@@ -791,9 +600,7 @@
             <h4>Activity 3 &mdash; Visionary Selection &amp; Alpha Team Formation</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Participated in the Visionary selection process conducted for cohort evaluation. Following the selection process, participated in the formal segregation and formation of Alpha teams for targeted innovation challenges.
-
             </p>
 
           </div>
@@ -803,9 +610,7 @@
             <h4>Activity 4 &mdash; Laser Cutting Fabrication</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Participated in a hands-on laser cutting activity as part of rapid prototyping and fabrication, exploring material cutting speeds, vector paths, and structural assembly.
-
             </p>
 
           </div>
@@ -815,9 +620,7 @@
             <h4>Activity 5 &mdash; Social Media Debate / Group Discussion</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Concluded the week on Saturday with a structured group discussion and debate on the topic: <em>"Social Media &ndash; Good Influencer or Bad?"</em>. Strengthened communication skills, public discussion, critical thinking, and evaluating diverse perspectives.
-
             </p>
 
           </div>
@@ -825,43 +628,28 @@
           <div class="image-gallery">
 
             <div class="image-card">
-
               <img src="week4-fusion360-water-bottle.jpeg" alt="Fusion 360 water bottle 3D model">
-
               <div class="caption">// Photo 01: Fusion 360 &ndash; Water Bottle 3D Model</div>
-
             </div>
 
             <div class="image-card">
-
-              <img src="week4-3d-printing.jpg" alt="3D Printing Activity">
-
+              <img src="week4-3d-printing.jpeg" alt="3D Printing Activity">
               <div class="caption">// Photo 02: 3D Printing Activity</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week4-visionary-selection.jpg" alt="Visionary Selection">
-
               <div class="caption">// Photo 03: Visionary Selection</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week4-laser-cutting.jpeg" alt="Laser Cutting Activity">
-
               <div class="caption">// Photo 04: Laser Cutting Activity</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week4-social-media-debate.jpg" alt="Social Media Debate / Group Discussion">
-
               <div class="caption">// Photo 05: Social Media Debate / Group Discussion</div>
-
             </div>
 
           </div>
@@ -869,9 +657,7 @@
           <h4>Week 4 Learning Outcome</h4>
 
           <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
             Gained hands-on competency in 3D CAD modeling (Fusion 360 water bottle), additive manufacturing (3D printing), and subtractive fabrication (laser cutting). Transitioned into Alpha teams through formal selection while developing public communication, debate structure, and critical thinking skills.
-
           </p>
 
         </div>
@@ -893,9 +679,7 @@
           </div>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-
             Week 5 progressed from UI/UX design into user research, project management principles, startup client meeting, and engineering calculations:
-
           </p>
 
           <div class="activity-block">
@@ -903,15 +687,11 @@
             <h4>Session 1 &mdash; UI/UX Design &amp; User Research</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-
               Learned core principles of UI/UX design in Figma, received the formal project problem statement, and conducted user surveys to collect responses. Based on the survey findings, analyzed user needs and refined problem requirements for our digital interface.
-
             </p>
 
             <a href="https://from-aspect-75378046.figma.site/" target="_blank" rel="noopener" class="app-link-btn">
-
               <span>View UI/UX Prototype / Application Link ↗</span>
-
             </a>
 
           </div>
@@ -921,9 +701,7 @@
             <h4>Session 2 &mdash; Project Management Workshop (Bosch Expert)</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Attended a dedicated Project Management session conducted by <strong>Bhuvan Sundar Surappaiya from Bosch</strong>, introducing project planning, milestones, execution frameworks, and resource tracking.
-
             </p>
 
           </div>
@@ -933,15 +711,11 @@
             <h4>Client Meeting &amp; Technical Research (Startup Elaicle)</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-
               Participated in a technical client meeting with representatives from startup Elaicle to clarify system requirements and operational scope.
-
             </p>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Following the startup meeting, conducted technical research on battery sizing calculations (voltage &amp; Ah capacity), motor sizing calculations (load torque &amp; RPM matching), completed a recommended technical course suggested by the founder of Elaicle, and researched hub motor working principles and market solutions.
-
             </p>
 
           </div>
@@ -949,27 +723,18 @@
           <div class="image-gallery">
 
             <div class="image-card">
-
               <img src="week5-figma-uiux.png" alt="Figma UI/UX Activity">
-
               <div class="caption">// Photo 01: Figma UI/UX Activity</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week5-survey-analysis.jpeg" alt="Survey Analysis / Problem Analysis">
-
               <div class="caption">// Photo 02: Survey Response &amp; Problem Analysis</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week5-project-management.jpg" alt="Project Management Session">
-
               <div class="caption">// Photo 03: Project Management Session (Bosch Expert)</div>
-
             </div>
 
           </div>
@@ -977,9 +742,7 @@
           <h4>Week 5 Learning Outcome</h4>
 
           <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
             Progressed seamlessly through Figma UI/UX fundamentals, problem formulation, user survey data analysis, industrial project management principles (Bosch), client requirement translation, mathematical battery and motor sizing, and commercial hub motor market research.
-
           </p>
 
         </div>
@@ -1001,9 +764,7 @@
           </div>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-
             Week 6 combined client digital product design in Figma with hands-on embedded electronics, transistor circuits, soldering practice, and ESP32 projects:
-
           </p>
 
           <div class="activity-block">
@@ -1011,9 +772,7 @@
             <h4>First Alpha Team Client Meeting</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Attended our Alpha team's first client meeting regarding the problem statement to establish project requirements and scope boundaries.
-
             </p>
 
           </div>
@@ -1023,9 +782,7 @@
             <h4>UI/UX Continuation Session</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Worked on project branding, created a mind map organizing problem dimensions and solutions, built a site map structuring application flow, designed webpage layouts, created wireframes in Figma, and developed an interactive application prototype in Figma focusing on user flow and UI/UX structure.
-
             </p>
 
           </div>
@@ -1035,9 +792,7 @@
             <h4>Session: Computational Hardware &amp; Embedded Systems</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-
               Attended a comprehensive session covering digital electronics, transistor logic, soldering practice, microcontrollers, and sensor/actuator applications:
-
             </p>
 
             <ul style="color:var(--text-muted); padding-left:20px; margin-bottom:0; display:flex; flex-direction:column; gap:6px;">
@@ -1057,43 +812,28 @@
           <div class="image-gallery">
 
             <div class="image-card">
-
               <img src="week6-uiux-branding.png" alt="UI/UX Branding">
-
               <div class="caption">// Photo 01: UI/UX Branding &amp; Visual System</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week6-poster-figma.png" alt="Application Wireframes">
-
               <div class="caption">// Photo 02: Application Wireframes in Figma (Poster)</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week6-not-gate-npn.jpeg" alt="NOT Gate / NPN Transistor Circuit">
-
               <div class="caption">// Photo 03: NOT Gate / NPN Transistor Dot Board Circuit</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week6-soldering-pcb.jpeg" alt="Soldering on PCB">
-
               <div class="caption">// Photo 04: PCB Soldering &amp; Desoldering Practice</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week6-target-shooter.jpeg" alt="Target Shooter – ESP32 OLED Joystick Project">
-
               <div class="caption">// Photo 05: Target Shooter (ESP32, OLED, Joystick &amp; Ultrasonic)</div>
-
             </div>
 
           </div>
@@ -1101,9 +841,7 @@
           <h4>Week 6 Learning Outcome</h4>
 
           <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
             Successfully combined digital UX design (client scoping, branding, mind mapping, wireframing, and Figma interactive prototyping) with hardware engineering (transistor inverter logic on dot boards, PCB soldering, ESP32 OLED game building, and PIR sensor/door strike actuator technical presentations).
-
           </p>
 
         </div>
@@ -1125,9 +863,7 @@
           </div>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-
             Week 7 covered microcontroller programming, firmware architectures, IoT cloud platforms, and building full-stack web applications with Firebase Authentication and Hosting:
-
           </p>
 
           <div class="activity-block">
@@ -1135,9 +871,7 @@
             <h4>Computational Hardware &amp; Embedded Systems &mdash; Continuation</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Continued hardware learning from Week 6: tested LED blinking using Arduino boards, learned Arduino IDE basics and pin functions for peripheral interfacing, explored embedded simulators and emulators, studied the five-block embedded architecture, understood processor polling loops, learned C and Embedded C programming, and deepened digital NOT gate / inverter logic principles.
-
             </p>
 
           </div>
@@ -1147,9 +881,7 @@
             <h4>Session: Internet of Things (IoT)</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-
               Attended a dedicated IoT session exploring connected devices, sensors, actuators, communication protocols, and remote device control:
-
             </p>
 
             <ul style="color:var(--text-muted); padding-left:20px; margin-bottom:0; display:flex; flex-direction:column; gap:6px;">
@@ -1167,35 +899,23 @@
           <div class="image-gallery">
 
             <div class="image-card">
-
               <img src="week7-not-gate.jpeg" alt="NOT Gate / Inverter">
-
               <div class="caption">// Photo 01: Digital NOT Gate / Inverter</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week7-adafruit-dashboard.jpeg" alt="Adafruit Dashboard">
-
               <div class="caption">// Photo 02: Adafruit Cloud Dashboard</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week7-firebase-landing-page.jpeg" alt="Firebase Landing Page">
-
               <div class="caption">// Photo 03: Firebase Landing Page</div>
-
             </div>
 
             <div class="image-card">
-
               <img src="week7-esp32-bulb-control.jpeg" alt="ESP32 LED/Bulb Control Hardware">
-
               <div class="caption">// Photo 04: ESP32 Local Web Server LED/Bulb Hardware</div>
-
             </div>
 
           </div>
@@ -1203,9 +923,7 @@
           <h4>Week 7 Learning Outcome</h4>
 
           <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
             Mastered embedded firmware development on Arduino IDE, 5-block architecture, polling loops, and Embedded C, progressing into IoT cloud dashboards (Adafruit), full-stack web applications with Firebase Authentication &amp; Hosting, and local HTTP web server control on ESP32 microcontrollers.
-
           </p>
 
         </div>
@@ -1227,9 +945,7 @@
           </div>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-
             Week 8 consisted of finalizing the electrical component architecture for our project prototype, a robot selection exercise built around an industrial scenario, and an intensive session on Robot Operating System (ROS), Linux environments, movement simulation, and Gazebo modeling.
-
           </p>
 
           <div class="activity-block">
@@ -1237,9 +953,7 @@
             <h4>Activity 1 &mdash; Project Prototype &ndash; Electrical Component Finalization</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               During the first two days of Week 8, worked on our project prototype development. For the electrical side of the project, we identified, evaluated, and finalized the required electrical components necessary for upcoming hardware prototype development.
-
             </p>
 
           </div>
@@ -1249,9 +963,7 @@
             <h4>Activity 2 &mdash; Robot Selection Activity</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Given a set of robots and a defined industrial scenario, worked with a budget of 100 points to evaluate each robot against the scenario's requirements and select the most suitable robot for the task &mdash; weighing trade-offs like cost, capability, and fit against the constraints of the scenario.
-
             </p>
 
           </div>
@@ -1261,9 +973,7 @@
             <h4>Session: ROS &ndash; Robot Operating System</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:10px;">
-
               Attended a dedicated session on Robot Operating System (ROS), exploring robotics communication frameworks, joint kinematics, Linux workflows, and virtual physics simulation:
-
             </p>
 
             <ul style="color:var(--text-muted); padding-left:20px; margin-bottom:0; display:flex; flex-direction:column; gap:6px;">
@@ -1280,11 +990,11 @@
 
           <div class="image-gallery">
 
+            <!-- CORRECTED WEEK 8 PATHS -->
+
             <div class="image-card">
 
-              <img src="week8-ros-basics.jpg"
-                   alt="ROS Fundamentals & Robotic System Concepts"
-                   onerror="this.onerror=null; this.src='images/protosim/week8/ros-basics.jpg';">
+              <img src="week8-ros-fundamentals.jpg" alt="ROS Fundamentals & Robotic System Concepts">
 
               <div class="caption">// Photo 02: Activity 1 &mdash; ROS (ROS Fundamentals &amp; Robotic Systems)</div>
 
@@ -1292,9 +1002,7 @@
 
             <div class="image-card">
 
-              <img src="week8-turtlesim.jpg"
-                   alt="Ubuntu and Turtlesim Movement"
-                   onerror="this.onerror=null; this.src='images/protosim/week8/turtlesim.jpg';">
+              <img src="week8-ubuntu-turtlesim.jpeg" alt="Ubuntu and Turtlesim Movement">
 
               <div class="caption">// Photo 03: Activity 2 &mdash; ROS (Ubuntu &amp; Turtlesim Movement)</div>
 
@@ -1302,9 +1010,7 @@
 
             <div class="image-card">
 
-              <img src="week8-gazebo-simulation.jpg"
-                   alt="Gazebo Vehicle Prototype Simulation"
-                   onerror="this.onerror=null; this.src='images/protosim/week8/gazebo-simulation.jpg';">
+              <img src="week8-gazebo-vehicle-simulation.jpg" alt="Gazebo Vehicle Prototype Simulation">
 
               <div class="caption">// Photo 04: Activity 3 &mdash; ROS (Gazebo Vehicle Prototype Simulation)</div>
 
@@ -1315,9 +1021,7 @@
           <h4>Week 8 Learning Outcome</h4>
 
           <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
             Finalized project prototype electrical components, practiced structured decision-making through the points-based robot selection activity for an industrial scenario, mastered ROS fundamentals and joint mechanics, executed Linux Turtlesim coordinate movement in Ubuntu, and successfully ran vehicle prototype simulations in the Gazebo 3D physics simulator.
-
           </p>
 
         </div>
@@ -1339,17 +1043,13 @@
           </div>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-
             Week 9 was spent working with the Alpha team on our project prototype, closing out remaining tasks and assignments that were still pending from earlier weeks.
-
           </p>
 
           <h4>Week 9 Learning Outcome</h4>
 
           <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
             Made steady progress on the Alpha team prototype by clearing pending tasks and assignments, keeping the project on track ahead of the following week.
-
           </p>
 
         </div>
@@ -1371,9 +1071,7 @@
           </div>
 
           <p style="color:var(--text-muted); line-height:1.6;">
-
             Week 10 was a specialized ASADI session focused on individual problem-solving, web development, platform integration, SaaS product development, and learning how Large Language Models (LLMs) can be applied in software products.
-
           </p>
 
           <div class="activity-block">
@@ -1381,9 +1079,7 @@
             <h4>Day 1 &mdash; Problem Statement &amp; Individual Website Development</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Received a problem statement and independently developed a website based on the given requirements. Created a fork from the provided GitHub repository/link and pushed the completed work to GitHub, gaining practical experience with individual development and Git-based project workflows.
-
             </p>
 
           </div>
@@ -1393,9 +1089,7 @@
             <h4>Day 2 &mdash; LandChain &amp; Landsmith Integration</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Worked with LandChain and Landsmith integration as part of the specialized session, understanding how external tools and services can be incorporated into a web-based product workflow.
-
             </p>
 
           </div>
@@ -1405,9 +1099,7 @@
             <h4>Day 3 &amp; Day 4 &mdash; SaaS Product Development &amp; LLM Learning</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               Combined all the given problem statements into a single website designed as a SaaS product. Worked on the complete web experience while learning the fundamentals and practical applications of Large Language Models (LLMs) in modern software development.
-
             </p>
 
           </div>
@@ -1437,9 +1129,7 @@
             <h4>ASADI Website</h4>
 
             <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
               The website developed during the ASADI specialized session is available through the link below.
-
             </p>
 
             <a href="PASTE-YOUR-ASADI-WEBSITE-LINK-HERE" target="_blank" rel="noopener" class="app-link-btn">
@@ -1453,16 +1143,14 @@
           <h4>Week 10 Learning Outcome</h4>
 
           <p style="color:var(--text-muted); line-height:1.6; margin-bottom:0;">
-
             Developed an individual website from a problem statement, practiced GitHub fork and deployment workflows, explored LandChain and Landsmith integration, built a combined SaaS product from multiple problem statements, and gained an introductory understanding of LLMs in software development.
-
           </p>
 
         </div>
 
       </div>
 
-      <!-- WEEK 11 -->
+      <!-- WEEKS 11 TO 20 -->
 
       <div class="week-panel" id="week11">
 
@@ -1476,8 +1164,6 @@
 
       </div>
 
-      <!-- WEEK 12 -->
-
       <div class="week-panel" id="week12">
 
         <div class="glass" style="padding:28px; border-radius:12px;">
@@ -1489,8 +1175,6 @@
         </div>
 
       </div>
-
-      <!-- WEEK 13 -->
 
       <div class="week-panel" id="week13">
 
@@ -1504,8 +1188,6 @@
 
       </div>
 
-      <!-- WEEK 14 -->
-
       <div class="week-panel" id="week14">
 
         <div class="glass" style="padding:28px; border-radius:12px;">
@@ -1517,8 +1199,6 @@
         </div>
 
       </div>
-
-      <!-- WEEK 15 -->
 
       <div class="week-panel" id="week15">
 
@@ -1532,8 +1212,6 @@
 
       </div>
 
-      <!-- WEEK 16 -->
-
       <div class="week-panel" id="week16">
 
         <div class="glass" style="padding:28px; border-radius:12px;">
@@ -1545,8 +1223,6 @@
         </div>
 
       </div>
-
-      <!-- WEEK 17 -->
 
       <div class="week-panel" id="week17">
 
@@ -1560,8 +1236,6 @@
 
       </div>
 
-      <!-- WEEK 18 -->
-
       <div class="week-panel" id="week18">
 
         <div class="glass" style="padding:28px; border-radius:12px;">
@@ -1574,8 +1248,6 @@
 
       </div>
 
-      <!-- WEEK 19 -->
-
       <div class="week-panel" id="week19">
 
         <div class="glass" style="padding:28px; border-radius:12px;">
@@ -1587,8 +1259,6 @@
         </div>
 
       </div>
-
-      <!-- WEEK 20 -->
 
       <div class="week-panel" id="week20">
 
@@ -1616,7 +1286,7 @@
 
       <div class="brand" style="margin-bottom:6px;">BHUVANASHREE K R</div>
 
-      <div class="footer-note">Coimbatore, Tamil Nadu &nbsp;·&nbsp; bhuvanashreekr\@gmail.com</div>
+      <div class="footer-note">Coimbatore, Tamil Nadu &nbsp;·&nbsp; bhuvanashreekr@gmail.com</div>
 
       <div class="footer-note" style="margin-top:8px; opacity:0.7;">© <span class="js-year"></span> Bhuvanashree K R. All rights reserved.</div>
 
